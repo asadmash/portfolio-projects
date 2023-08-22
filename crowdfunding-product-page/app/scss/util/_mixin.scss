@@ -1,0 +1,14 @@
+// mixin for jvg images
+@mixin bgimageJpg($name) {
+    $url: '../../images/#{$name}.jpg';
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// mixin for svg images
+@mixin bgimageSvg($name) {
+    $url: '../../images/#{name}.svg';
+    background-image: url($url);
+    background-repeat: no-repeat;
+}
