@@ -1,0 +1,12 @@
+#companies {
+    margin: 120px 0;
+  display: grid;
+   grid-template-columns: repeat(1, 160px);
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    img {
+        width: 150px;
+        height: inherit;
+    }
+}
