@@ -1,0 +1,46 @@
+#early-access {
+    z-index: 99;
+position: sticky;
+    background-color: $intro-and-email-sign-up-background;
+    padding: 30px;
+
+    p {
+        margin: 20px 0;
+    }
+
+    .submit {
+        input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+}
+        button {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            color: $Hover-White;
+            background-color: $Blue-inside-call-to-action-gradient;
+            border: none;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            margin-top: 20px;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            &:hover {
+                cursor: pointer;
+                background: $Cyan-inside-call-to-action-gradient;
+            }
+}
+    }
+}
