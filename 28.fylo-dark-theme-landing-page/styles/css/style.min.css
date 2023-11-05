@@ -21,6 +21,7 @@ body .container {
   background-color: hsl(218, 28%, 13%);
 }
 body .container::after {
+  z-index: 0;
   content: "";
   position: absolute;
   top: 0;

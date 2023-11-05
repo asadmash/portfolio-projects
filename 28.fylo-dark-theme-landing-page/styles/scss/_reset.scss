@@ -26,6 +26,7 @@ text-align: center;
        
 
         &::after{
+            z-index: 0;
             content: '';
             position: absolute;
             top: 0;
