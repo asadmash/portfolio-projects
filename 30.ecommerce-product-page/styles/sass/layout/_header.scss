@@ -1,0 +1,233 @@
+@use "./../abstracts/colors" as *;
+@use "./../abstracts/breakpoints" as *;
+
+header {
+  display: flex;
+  padding: 20px 8px 25px;
+  // background-color: $White;
+  justify-content: space-between;
+
+  @include media("<tablet") {
+    max-width: 500px;
+    margin: auto;
+  }
+  @include media(">tablet") {
+    padding: 30px 80px;
+  }
+  #nav-area {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    // horizontal nav bar for large device
+    #mobile-toggle {
+      @include media(">tablet") {
+        display: none;
+      }
+    }
+
+    nav {
+      display: block;
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+
+        li a {
+          text-decoration: none;
+          color: $Dark-grayish-blue;
+          transition: all 200ms ease-in-out;
+          display: inline-block;
+          border-radius: 5px;
+          padding: 0 5px;
+          &:hover,
+          &:focus {
+            color: $Very-dark-blue;
+            transform: scale(1.15);
+            background-color: $Orange;
+          }
+        }
+      }
+
+      // vertical nav bar for mobile devices
+      @include media("<800px") {
+        display: none;
+        position: absolute;
+        right: 5px;
+        top: 70px;
+        background-color: red;
+        width: 95vw;
+
+        ul {
+          flex-direction: column;
+          gap: 0;
+          li {
+            width: 100%;
+            padding: 20px 50px;
+            text-align: right;
+          }
+        }
+      }
+      @include media(">=800px", "<=mddesktop") {
+        ul {
+          gap: 20px;
+        }
+      }
+    }
+  }
+  #user {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    @include media("<=mddesktop") {
+      margin-left: 10px;
+      gap: 20px;
+      transition: all 200ms ease-in-out;
+    }
+
+    #cart {
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
+    #profile {
+      width: 48px;
+      height: 48px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: all 200ms ease-in-out;
+
+      &:hover,
+      &:focus {
+        border: 2px solid $Orange;
+        transform: scale(1.25);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // ********* CART CONTAINER *****************
+  .cart-container {
+    width: 400px;
+    transition: all 200ms ease-in-out;
+    // width: auto;
+    display: none;
+    height: auto;
+    padding: 30px;
+    position: absolute;
+    top: 66px;
+    right: -13px;
+    z-index: 999;
+    background-color: $White;
+    border-radius: 10px;
+
+    box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
+    -webkit-box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
+    -moz-box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
+
+    @include media("<=468px") {
+      width: 400px;
+      right: 0;
+    }
+
+    @include media("<=430px") {
+      width: 320px;
+      right: 0;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 0;
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+      }
+
+      // item-description
+      .cart-del {
+        // background: transparent;
+        border: none;
+
+        i {
+          color: $Grayish-blue;
+          transition: 200ms ease-in-out;
+          &:hover {
+            color: $Dark-grayish-blue;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .item-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    // Checkout Button
+    .checkout-btn {
+      width: 100%;
+      height: 50px;
+      background: $Orange;
+      border: none;
+      color: $White;
+      font-size: 18px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 150ms ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  // ******** USER - PROFILE ***********
+  #user-profile {
+    width: 308px;
+    transition: all 200ms ease-in-out;
+    // width: auto;
+    display: none;
+    height: auto;
+    padding: 30px;
+    position: absolute;
+    top: 66px;
+    right: -13px;
+    z-index: 999;
+    background-color: $White;
+    border-radius: 10px;
+    box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
+    -webkit-box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
+    -moz-box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
+
+    .user-image {
+      width: 100%;
+      text-align: center;
+
+      img {
+        border: 4px solid $Orange;
+        border-radius: 50%;
+      }
+    }
+
+    .user-description {
+      h2{
+        margin: 10px 0;
+      }
+      p {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
