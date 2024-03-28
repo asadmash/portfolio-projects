@@ -21,7 +21,7 @@
     width: 390px;
   }
 
-  .slider {
+  .slider, .ov-slider {
     width: inherit;
     height: 100%;
     margin: auto;
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
 
-    .slide {
+    .slide, .ov-slide {
       flex: 0 0 100%;
       transition: transform 1s ease;
       // position: relative;
@@ -164,7 +164,7 @@
     }
   }
 
-  .slider {
+  .ov-slider {
     width: 100%;
     height: 100%;
     z-index: 99999 !important;
