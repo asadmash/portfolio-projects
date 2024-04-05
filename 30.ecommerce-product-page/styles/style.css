@@ -3,7 +3,7 @@ body {
 }
 
 * .hide {
-  display: none;
+  display: none !important;
 }
 
 * {
@@ -17,6 +17,75 @@ body {
 * Testing
 *
 **/
+.checkout-confirmation {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(12, 12, 12, 0.603);
+  z-index: 999;
+}
+.checkout-confirmation .confirmation-container {
+  position: relative;
+  z-index: 9999;
+  width: 40vw;
+  height: 40vh;
+  background-color: #FEFDED;
+  display: flex;
+  padding: 0 30px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .checkout-confirmation .confirmation-container {
+    flex-direction: column-reverse;
+    width: 60vw;
+  }
+}
+@media (max-width: 500px) {
+  .checkout-confirmation .confirmation-container {
+    font-size: 15px;
+    height: 30vh;
+  }
+}
+.checkout-confirmation .confirmation-container .greetings-close-btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 5px;
+  transition: all 150ms ease-in;
+  text-align: center;
+}
+.checkout-confirmation .confirmation-container .greetings-close-btn :hover {
+  fill: rgb(201, 8, 8);
+  cursor: pointer;
+}
+.checkout-confirmation .confirmation-container .greetings-close-btn svg {
+  width: inherit;
+  height: inherit;
+}
+.checkout-confirmation .confirmation-container .confirm-image {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.checkout-confirmation .confirmation-container .confirm-image i {
+  font-size: 40px;
+  color: rgb(6, 177, 6);
+}
+
 .container {
   width: 100vw;
   height: 100%;
@@ -24,7 +93,7 @@ body {
   margin: auto;
   flex-direction: column;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container {
     max-width: 500px;
     margin: auto;
@@ -116,6 +185,54 @@ header #nav-area nav ul li a:hover, header #nav-area nav ul li a:focus {
     gap: 20px;
   }
 }
+header .mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 80vw;
+  height: auto;
+  background-color: hsl(220, 14%, 75%);
+  z-index: 9999;
+  transition: transform 250ms ease;
+  transform: translateX(-10000px);
+}
+header .mobile-menu ul {
+  padding: 60px 40px;
+}
+header .mobile-menu ul li {
+  list-style: none;
+  border-bottom: 1px solid hsl(219, 9%, 45%);
+  text-align: right;
+  padding-right: 20px;
+  margin: 0 30px 30px;
+}
+header .mobile-menu ul li a {
+  text-decoration: none;
+  color: hsl(220, 13%, 13%);
+  transition: all 150ms ease-in-out;
+}
+header .mobile-menu ul li a:hover {
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+header .mobile-menu .close-btn {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+header .mobile-menu .close-btn:hover svg {
+  fill: rgb(201, 116, 116);
+}
+header .mobile-menu-show {
+  transform: translateX(0);
+}
 header #user {
   display: flex;
   align-items: center;
@@ -154,6 +271,7 @@ header #user #profile img {
 header .cart-container {
   width: 400px;
   transition: all 200ms ease-in-out;
+  overflow: hidden;
   display: none;
   height: auto;
   padding: 30px;
@@ -236,6 +354,7 @@ header #user-profile {
   box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
   -webkit-box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
   -moz-box-shadow: 1px 15px 33px -5px rgba(135, 133, 133, 0.75);
+  z-index: 9999;
 }
 header #user-profile .user-image {
   width: 100%;
@@ -252,30 +371,37 @@ header #user-profile .user-description p {
   margin-bottom: 5px;
 }
 
-#gallary, #ov-gallary {
+#gallary,
+#ov-gallary {
   width: 100%;
   height: 40vh;
   max-width: 500px;
   flex-basis: 50%;
 }
 @media (min-width: 769px) {
-  #gallary, #ov-gallary {
+  #gallary,
+  #ov-gallary {
     height: 100%;
   }
 }
 @media (min-width: 769px) and (max-width: 912px) {
-  #gallary, #ov-gallary {
+  #gallary,
+  #ov-gallary {
     height: 100%;
     width: 370px;
   }
 }
 @media (min-width: 913px) and (max-width: 1024px) {
-  #gallary, #ov-gallary {
+  #gallary,
+  #ov-gallary {
     height: 100%;
     width: 390px;
   }
 }
-#gallary .slider, #gallary .ov-slider, #ov-gallary .slider, #ov-gallary .ov-slider {
+#gallary .slider,
+#gallary .ov-slider,
+#ov-gallary .slider,
+#ov-gallary .ov-slider {
   width: inherit;
   height: 100%;
   margin: auto;
@@ -283,23 +409,54 @@ header #user-profile .user-description p {
   position: relative;
   display: flex;
   align-items: center;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
-#gallary .slider .slide, #gallary .slider .ov-slide, #gallary .ov-slider .slide, #gallary .ov-slider .ov-slide, #ov-gallary .slider .slide, #ov-gallary .slider .ov-slide, #ov-gallary .ov-slider .slide, #ov-gallary .ov-slider .ov-slide {
+#gallary .slider .slide,
+#gallary .slider .ov-slide,
+#gallary .ov-slider .slide,
+#gallary .ov-slider .ov-slide,
+#ov-gallary .slider .slide,
+#ov-gallary .slider .ov-slide,
+#ov-gallary .ov-slider .slide,
+#ov-gallary .ov-slider .ov-slide {
   flex: 0 0 100%;
   transition: transform 1s ease;
+  border-radius: 30px !important;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  overflow: hidden;
 }
-#gallary .slider .slide img, #gallary .slider .ov-slide img, #gallary .ov-slider .slide img, #gallary .ov-slider .ov-slide img, #ov-gallary .slider .slide img, #ov-gallary .slider .ov-slide img, #ov-gallary .ov-slider .slide img, #ov-gallary .ov-slider .ov-slide img {
+#gallary .slider .slide img,
+#gallary .slider .ov-slide img,
+#gallary .ov-slider .slide img,
+#gallary .ov-slider .ov-slide img,
+#ov-gallary .slider .slide img,
+#ov-gallary .slider .ov-slide img,
+#ov-gallary .ov-slider .slide img,
+#ov-gallary .ov-slider .ov-slide img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 @media (min-width: 361px) and (max-width: 768px) {
-  #gallary .slider, #gallary .ov-slider, #ov-gallary .slider, #ov-gallary .ov-slider {
+  #gallary .slider,
+  #gallary .ov-slider,
+  #ov-gallary .slider,
+  #ov-gallary .ov-slider {
     height: 50vh;
   }
 }
 @media (min-width: 769px) {
-  #gallary .slider, #gallary .ov-slider, #ov-gallary .slider, #ov-gallary .ov-slider {
+  #gallary .slider,
+  #gallary .ov-slider,
+  #ov-gallary .slider,
+  #ov-gallary .ov-slider {
     flex-basis: 50%;
     height: 100%;
     border-radius: 30px;
@@ -309,7 +466,8 @@ header #user-profile .user-description p {
     -o-border-radius: 30px;
   }
 }
-#gallary .btn, #ov-gallary .btn {
+#gallary .btn,
+#ov-gallary .btn {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -321,29 +479,35 @@ header #user-profile .user-description p {
   border: 2px solid hsl(220, 14%, 75%);
   overflow: hidden;
 }
-#gallary .btn:hover, #ov-gallary .btn:hover {
+#gallary .btn:hover,
+#ov-gallary .btn:hover {
   opacity: 1;
 }
-#gallary .prev-btn, #ov-gallary .prev-btn {
+#gallary .prev-btn,
+#ov-gallary .prev-btn {
   left: 3px;
   z-index: 999;
 }
-#gallary .next-btn, #ov-gallary .next-btn {
+#gallary .next-btn,
+#ov-gallary .next-btn {
   right: 3px;
   z-index: 999;
 }
-#gallary .thumbnail-container, #ov-gallary .thumbnail-container {
+#gallary .thumbnail-container,
+#ov-gallary .thumbnail-container {
   display: flex;
   gap: 15px;
   margin-top: 15px;
   justify-content: space-around;
 }
-#gallary .thumbnail-container .thum, #ov-gallary .thumbnail-container .thum {
+#gallary .thumbnail-container .thum,
+#ov-gallary .thumbnail-container .thum {
   height: 100px;
   width: 100px;
   padding: 5px;
 }
-#gallary .thumbnail-container .thum a, #ov-gallary .thumbnail-container .thum a {
+#gallary .thumbnail-container .thum a,
+#ov-gallary .thumbnail-container .thum a {
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -351,18 +515,21 @@ header #user-profile .user-description p {
   border: 1px solid transparent;
   transition: all 200ms ease-in-out;
 }
-#gallary .thumbnail-container .thum a img, #ov-gallary .thumbnail-container .thum a img {
+#gallary .thumbnail-container .thum a img,
+#ov-gallary .thumbnail-container .thum a img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-#gallary .thumbnail-container .thum a:hover, #ov-gallary .thumbnail-container .thum a:hover {
+#gallary .thumbnail-container .thum a:hover,
+#ov-gallary .thumbnail-container .thum a:hover {
   opacity: 0.5;
   width: 105%;
   height: 105%;
   scale: 1.05;
 }
-#gallary .thumbnail-container .thum a:focus, #ov-gallary .thumbnail-container .thum a:focus {
+#gallary .thumbnail-container .thum a:focus,
+#ov-gallary .thumbnail-container .thum a:focus {
   border: 2px solid hsl(26, 100%, 55%);
   width: 100%;
   height: 100%;
@@ -375,6 +542,11 @@ header #user-profile .user-description p {
   padding: 223px 0;
   height: 100%;
 }
+@media (max-width: 768px) {
+  #ov-gallary {
+    padding: 20px 0;
+  }
+}
 #ov-gallary .close-btn {
   position: absolute;
   right: 10px;
@@ -382,7 +554,7 @@ header #user-profile .user-description p {
   height: 20px;
   top: 190px;
   cursor: pointer;
-  z-index: 99999 !important;
+  z-index: 999999 !important;
 }
 #ov-gallary .close-btn svg {
   width: 20px;
@@ -395,10 +567,20 @@ header #user-profile .user-description p {
 #ov-gallary .close-btn svg:hover {
   fill: hsl(26, 100%, 55%);
 }
+@media (max-width: 768px) {
+  #ov-gallary .close-btn {
+    top: -18px;
+  }
+}
 #ov-gallary .ov-slider {
   width: 100%;
   height: 100%;
   z-index: 99999 !important;
+}
+@media (max-width: 768px) {
+  #ov-gallary .ov-slider {
+    height: 50%;
+  }
 }
 #ov-gallary .thumbnail-container {
   width: inherit;
@@ -409,10 +591,11 @@ header #user-profile .user-description p {
 #ov-gallary::after {
   content: "";
   position: absolute;
-  top: -18px;
-  left: -1166px;
-  width: 1000vw;
-  height: 100vh;
+  top: -95px;
+  left: -1000px;
+  width: 10000px;
+  overflow: visible;
+  height: 135vh;
   opacity: 0.7;
   background-color: #222121;
   z-index: 999;

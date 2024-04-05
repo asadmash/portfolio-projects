@@ -1,0 +1,75 @@
+@use "./../base/base" as *;
+@use "./../abstracts/breakpoints" as *;
+.checkout-confirmation {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(12, 12, 12, 0.603);
+  z-index: 999;
+
+
+ .confirmation-container{
+  position: relative;
+  z-index: 9999;
+  width: 40vw;
+  height: 40vh;
+  background-color: #FEFDED;
+  display: flex;
+  padding: 0 30px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+gap: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
+  @include media("<=tablet") {
+flex-direction: column-reverse;
+width: 60vw;
+  }
+
+  @include media("<=500px") {
+font-size: 15px;
+height: 30vh;
+  }
+
+.greetings-close-btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 5px;
+  transition: all 150ms ease-in;
+  text-align: center;
+  :hover{
+    fill: rgb(201, 8, 8);
+    cursor: pointer;
+  }
+
+  svg{
+    width: inherit;
+    height: inherit;
+  }
+
+}
+
+  .confirm-image{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    i {
+     font-size: 40px;
+     color: rgb(6, 177, 6);
+    }
+  }
+} 
+}
