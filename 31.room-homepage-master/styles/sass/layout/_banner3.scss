@@ -1,0 +1,16 @@
+@use "./../abstracts/breakpoints" as *;
+.banner-3 {
+    background-image: url(/images/image-about-light.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: (240px / 330px) * 100%;
+    height: 0;
+
+    @include media(">=850px") {
+        grid-area: banner3;
+        height: 100%;
+        padding-top: 0;
+       }
+}
