@@ -1,45 +1,60 @@
-@use '../abstracts/colors' as *;
+@use "../abstracts/colors" as *;
 @use "./../abstracts/breakpoints" as *;
 
 body {
-    font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
+  display: grid;
+  // max-width: 512px;
+  position: relative;
+
+  
+
+  .main-container {
+
     display: grid;
-    // max-width: 512px;
-    .main-container{
-        display: grid;
-        height: 100vh;
+    height: auto;
 
-    // create desktop view
-    @include media(">=850px") { 
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(6,1fr);
-        grid-template-areas: 
-            'header header header header header header header discover discover discover discover discover'
-            'header header header header header header header discover discover discover discover discover'
-            'header header header header header header header discover discover discover discover discover'
-            'header header header header header header header discover discover discover discover discover'
-            'banner2 banner2 banner2 about about about about about about banner3 banner3 banner3'
-            'banner2 banner2 banner2 about about about about about about banner3 banner3 banner3'
-            // 'banner2 banner2 banner2 about about about about about about banner3 banner3 banner3'
-          ;
-    }
+    @include media(">=850px") {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas:
+        "header header header header header header header discover discover discover discover discover"
+        "header header header header header header header discover discover discover discover discover"
+        "header header header header header header header discover discover discover discover discover"
+        "header header header header header header header discover discover discover discover discover"
+        "banner2 banner2 banner2 about about about about about about banner3 banner3 banner3"
+        "banner2 banner2 banner2 about about about about about about banner3 banner3 banner3"
+        // 'banner2 banner2 banner2 about about about about about about banner3 banner3 banner3'
+;
+
+height: 98vh;
     }
 
-.main-container {
-   
-   @include media( "<850px"){
-    max-width: 500px;
-    place-self: center;
-   }
-}
+    
+  }
+
+  .attribution{
+    position: fixed;
+    bottom: 0px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%);
+      }
+
+  .main-container {
+    @include media("<850px") {
+      max-width: 500px;
+      place-self: center;
+    }
+  }
 }
 
-* .hide {
-    display: none !important;
+*.hide {
+  display: none !important;
 }
 
 * p {
-    color: $very-dark-gray;
-    font-size: 1rem;
-    font-size: clamp(1rem, 0.92rem + 0.3999999999999999vw, 1.4rem);
-  }
+  color: $very-dark-gray;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.92rem + 0.3999999999999999vw, 1.4rem);
+}

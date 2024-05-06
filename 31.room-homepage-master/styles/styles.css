@@ -6,17 +6,26 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   display: grid;
+  position: relative;
 }
 body .main-container {
   display: grid;
-  height: 100vh;
+  height: auto;
 }
 @media (min-width: 850px) {
   body .main-container {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: "header header header header header header header discover discover discover discover discover" "header header header header header header header discover discover discover discover discover" "header header header header header header header discover discover discover discover discover" "header header header header header header header discover discover discover discover discover" "banner2 banner2 banner2 about about about about about about banner3 banner3 banner3" "banner2 banner2 banner2 about about about about about about banner3 banner3 banner3";
+    height: 98vh;
   }
+}
+body .attribution {
+  position: fixed;
+  bottom: 0px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%);
 }
 @media (max-width: 849px) {
   body .main-container {
@@ -25,7 +34,7 @@ body .main-container {
   }
 }
 
-* .hide {
+*.hide {
   display: none !important;
 }
 
