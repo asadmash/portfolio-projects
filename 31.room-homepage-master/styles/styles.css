@@ -271,7 +271,7 @@ header .slider .slide img {
 }
 
 .banner-3 {
-  background-image: url(/images/image-about-light.jpg);
+  background: url(/images/image-about-light.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
