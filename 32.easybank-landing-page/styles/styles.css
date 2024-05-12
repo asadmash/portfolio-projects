@@ -1,0 +1,104 @@
+/**
+*
+* Testing
+*
+**/
+* body {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* hide {
+  display: none;
+}
+
+* .container {
+  padding: 0 100px;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  background: hsl(0, 0%, 100%);
+  padding: 10px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container #logo {
+  flex-basis: 30%;
+}
+header .container .desktop-navigation {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .desktop-navigation ul {
+  display: flex;
+  list-style: none;
+}
+header .container .desktop-navigation ul li {
+  padding: 20px 10px;
+  position: relative;
+}
+header .container .desktop-navigation ul li a {
+  text-decoration: none;
+  padding: 0;
+  margin-bottom: 20px;
+  color: hsl(233, 8%, 62%);
+}
+header .container .desktop-navigation ul li a:hover {
+  color: hsl(233, 26%, 24%);
+}
+header .container .desktop-navigation ul li a.hover-link::after {
+  content: "";
+  display: block;
+  width: 0; /* Initially, no width for the border */
+  height: 2px; /* Border height */
+  transition: width 0.2s ease-in-out; /* Smooth transition for the width */
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Align it to the center */
+  background-color: #b85252;
+  opacity: 0;
+  z-index: 1;
+  transform: translateX(-50%); /* Center the element */
+}
+header .container .desktop-navigation ul li a.hover-link:hover::after {
+  width: 100%; /* Border width on hover */
+  opacity: 1;
+}
+header .container .desktop-navigation #req-btn {
+  flex-basis: 20%;
+  background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  border: none;
+  color: hsl(0, 0%, 100%);
+  height: 46px;
+  width: 160px;
+  border-radius: 40px;
+  transition: all 300ms ease-in-out;
+}
+header .container .desktop-navigation #req-btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to left, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  font-size: 18px;
+}
+@media (max-width: 900px) {
+  header .container {
+    padding: 0 50px;
+  }
+}
+header .mobile-navigation {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */
