@@ -1,0 +1,63 @@
+// Features section
+@use "./../abstracts/colors" as *;
+@use "./../abstracts/breakpoints" as *;
+
+
+
+
+#features {
+    background-color: $Light-Grayish-Blue;
+
+    .features-intro{
+        max-width: 662px;
+    }
+    .container {
+        padding: 40px 20px;
+        text-align: center;
+
+        h3 {
+            margin-top: 27px;
+            color: $Dark-Blue;
+
+            // @include media('>=860px'){
+
+            // }
+        }
+
+        p {
+            // text-align: justify;
+            margin-top: 27px;
+            margin-bottom: 50px;
+            color: $Grayish-Blue;
+        }
+
+        @include media(">560px") { 
+                padding: 40px 50px;
+        }
+        @include media(">=860px") { 
+               text-align: left;
+        }
+
+        @include media(">=860px") { 
+            padding: 120px 50px;
+        }
+    }
+
+    .features-card-container {
+.features-card {
+    max-width: 270px;
+}
+
+       @include media(">640px") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+       }
+
+       @include media(">=860px") { 
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        
+       }
+    }
+}

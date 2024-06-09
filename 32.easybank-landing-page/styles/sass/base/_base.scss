@@ -9,6 +9,13 @@ font-size: 18px;
 font-family: "Public Sans", sans-serif;
 font-weight: 400;
 font-style: normal;
+width: 100%;
+height: auto;
+}
+
+*p {
+    font-size: 1rem;
+font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 }
 
 // Font

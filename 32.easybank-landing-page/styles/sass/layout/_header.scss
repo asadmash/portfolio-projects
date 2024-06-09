@@ -6,6 +6,8 @@ header {
   height: auto;
   background: $Very-Light-White;
   padding: 10px 0;
+  position: fixed;
+  z-index: 99999;
 
   .container {
     display: flex;
@@ -26,8 +28,9 @@ header {
         li {
           padding: 20px 10px;
           position: relative;
-        
+
           a {
+            font-size: 16px;
             text-decoration: none;
             padding: 0;
             margin-bottom: 20px;
@@ -35,8 +38,9 @@ header {
 
             &:hover {
               color: $Dark-Blue;
+              
             }
-        
+
             &.hover-link::after {
               content: "";
               display: block;
@@ -46,55 +50,96 @@ header {
               position: absolute;
               bottom: 0;
               left: 50%; /* Align it to the center */
-              background-color: #b85252;
+              background-color: $Lime-Green;
               opacity: 0;
               z-index: 1;
               transform: translateX(-50%); /* Center the element */
             }
-        
+
             &.hover-link:hover::after {
               width: 100%; /* Border width on hover */
               opacity: 1;
             }
           }
-        }
-        
-        
-        
-        
-        
-        
-        
 
-       
+          // media queries
+          @include media("<801px") {
+            padding: 20px 5px;
+          }
+        }
       }
-      #req-btn {
-        flex-basis: 20%;
-        background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
-        border: none;
-        color: $Very-Light-White;
-        height: 46px;
-        width: 160px;
-        border-radius: 40px;
-        transition: all 300ms ease-in-out;
 
-        &:hover {
-          cursor: pointer;
-          background-image: linear-gradient(to left, $Lime-Green, $Bright-Cyan);
-          font-size: 18px;
-          // background-image: linear-gradient(to left,$Bright-Cyan, $Lime-Green);
-        }
+      @include media("<670px") {
+        display: none;
       }
     }
 
-
     @include media("<901px") {
       padding: 0 50px;
+    }
+    @include media("<730px") {
+      padding: 0 20px;
     }
   }
 
   // mobile Navigation
   .mobile-navigation {
     display: none;
+cursor: pointer;
+    nav {
+      position: absolute;
+      top: 6%;
+      right: 0;
+      width: 100%;
+      height: 100%;
+
+      //  background-image: linear-gradient(to bottom, #2d314d , #ffffff);
+      background: linear-gradient(
+        to bottom,
+        #484c6e48 0%,
+        /* Top color: 0% height  */ #484b643d 60%,
+        /* Top color: 80% height */ hsla(233, 8%, 62%, 0.11) 80%,
+        #ffffff00 100% /* Bottom color: 100% height (20% implied) */
+      );
+
+      ul {
+        list-style: none;
+        background-color: $Very-Light-White;
+        padding: 30px;
+        margin: 20px 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+
+        li {
+          padding: 10px;
+          pointer-events: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          transition: all 300ms ease-in-out;
+          border-radius: 5px;
+
+          &:hover {
+            background: $Grayish-Blue;
+          }
+          a {
+            text-decoration: none;
+            pointer-events: auto;
+            color: $Dark-Blue;
+            &:hover {
+              color: $Very-Light-White;
+            }
+          }
+        }
+      }
+    }
+    @include media("<670px") {
+      display: block;
+    }
   }
 }
