@@ -296,6 +296,11 @@ header .mobile-navigation nav ul li a:hover {
 #articles .container h2 {
   text-align: center;
 }
+@media (min-width: 860px) {
+  #articles .container h2 {
+    text-align: left;
+  }
+}
 @media (min-width: 561px) {
   #articles .container {
     padding: 50px 50px;

@@ -8,11 +8,17 @@
         padding: 50px 20px;
         h2 {
             text-align: center;
+
+            @include media(">=860px") { 
+                text-align: left;
+                    }
         }
 
         @include media(">560px") { 
             padding: 50px 50px;
     }
+
+
     }
 
     .article-card-container {
