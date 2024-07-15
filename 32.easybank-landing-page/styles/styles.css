@@ -12,9 +12,12 @@
   height: auto;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 * p {
   font-size: 1rem;
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 }
 
 * {
@@ -60,7 +63,7 @@ header .container .desktop-navigation ul {
   list-style: none;
 }
 header .container .desktop-navigation ul li {
-  padding: 20px 10px;
+  padding: 15px 10px;
   position: relative;
 }
 header .container .desktop-navigation ul li a {
@@ -175,6 +178,7 @@ header .mobile-navigation nav ul li a:hover {
 }
 .intro-container .container .para {
   margin: 25px 0;
+  max-width: 440px;
 }
 @media (min-width: 561px) {
   .intro-container .container {
@@ -190,6 +194,19 @@ header .mobile-navigation nav ul li a:hover {
   }
   .intro-container .bg-hero-image {
     flex-basis: 60%;
+  }
+}
+@media (min-width: 940px) {
+  .intro-container {
+    height: 80vh;
+  }
+  .intro-container .container {
+    flex-basis: 50%;
+    height: 100%;
+  }
+  .intro-container .bg-hero-image {
+    flex-basis: 50%;
+    height: 100%;
   }
 }
 
@@ -227,9 +244,6 @@ header .mobile-navigation nav ul li a:hover {
     padding: 120px 50px;
   }
 }
-#features .features-card-container .features-card {
-  max-width: 270px;
-}
 @media (min-width: 641px) {
   #features .features-card-container {
     display: grid;
@@ -258,6 +272,9 @@ header .mobile-navigation nav ul li a:hover {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+.article-card:hover {
+  cursor: pointer;
+}
 .article-card .article-image {
   width: 100%;
   height: 40vh;
@@ -268,6 +285,10 @@ header .mobile-navigation nav ul li a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.article-card img:hover {
+  scale: 1.03;
 }
 .article-card .article-text {
   padding: 30px 25px 40px;
@@ -275,6 +296,21 @@ header .mobile-navigation nav ul li a:hover {
   box-shadow: 0px 6px 9px 1px rgba(150, 152, 166, 0.19);
   -webkit-box-shadow: 0px 6px 9px 1px rgba(150, 152, 166, 0.19);
   -moz-box-shadow: 0px 6px 9px 1px rgba(150, 152, 166, 0.19);
+}
+.article-card .article-text .article-author, .article-card .article-text p {
+  color: hsl(233, 8%, 62%);
+}
+.article-card .article-text h3 {
+  margin: 15px 0;
+  transition: color 0.4s ease-in-out;
+  color: #2d314d;
+}
+.article-card .article-text h3:hover {
+  cursor: pointer;
+  color: hsl(136, 65%, 51%);
+}
+.article-card .article-text span {
+  font-size: 15px;
 }
 @media (min-width: 860px) {
   .article-card .article-text {
@@ -322,33 +358,130 @@ header .mobile-navigation nav ul li a:hover {
   }
 }
 
-.bg-hero-image {
-  background-image: url(/images/bg-intro-mobile.svg);
+@media (min-width: 701px) {
+  .hero-text {
+    padding: 60px 50px;
+  }
+}
+@media (min-width: 860px) {
+  .hero-text {
+    padding: 40px 50px;
+    text-align: left;
+  }
+}
+@media (min-width: 940px) {
+  .hero-text {
+    padding: 115px 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .hero-text {
+    padding: 115px 30px;
+  }
+  .hero-text h1 {
+    font-size: 60px;
+  }
+  .hero-text .para {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1508px) {
+  .hero-text {
+    padding: 115px 50px;
+  }
+}
+@media (min-width: 1608px) {
+  .hero-text {
+    padding: 115px 115px;
+  }
+}
+
+.bg-hero-image-container {
   width: 100vw;
   height: 45vh;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   z-index: 2;
 }
-.bg-hero-image .hero-image {
-  background-image: url(/images/image-mockups.png);
+.bg-hero-image-container .bg-hero-image {
+  background-image: url(/images/bg-intro-mobile.svg);
   position: absolute;
+  top: 0;
+  right: 0;
   width: 100%;
-  height: 100vh;
+  height: 55vh;
   background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  margin-left: 10%;
+  background-size: cover;
 }
-@media (min-width: 636px) {
-  .bg-hero-image {
-    height: 55vh;
+@media (min-width: 701px) {
+  .bg-hero-image-container .bg-hero-image {
+    height: 65vh;
+    background-image: url(/images/bg-intro-desktop.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: -20%;
+  }
+}
+@media (min-width: 860px) {
+  .bg-hero-image-container .bg-hero-image {
+    height: 88vh;
   }
 }
 @media (min-width: 701px) {
-  .bg-hero-image {
+  .bg-hero-image-container {
     height: 65vh;
+  }
+}
+.bg-hero-image-container .hero-image {
+  background-image: url(/images/image-mockups.png);
+  position: absolute;
+  width: 95vw;
+  height: 100vh;
+  top: -28%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 48%;
+  transform: translate(-50%, 0);
+}
+@media (min-width: 396px) {
+  .bg-hero-image-container .hero-image {
+    max-width: 435px;
+  }
+}
+@media (min-width: 636px) {
+  .bg-hero-image-container .hero-image {
+    max-width: 490px;
+  }
+}
+@media (min-width: 701px) {
+  .bg-hero-image-container .hero-image {
+    max-width: 552px;
+  }
+}
+@media (min-width: 860px) {
+  .bg-hero-image-container .hero-image {
+    max-width: 652px;
+    left: 66%;
+    top: -15%;
+  }
+}
+@media (min-width: 940px) {
+  .bg-hero-image-container .hero-image {
+    max-width: 652px;
+    left: 66%;
+    top: -4%;
+  }
+}
+@media (min-width: 1060px) {
+  .bg-hero-image-container .hero-image {
+    max-width: 652px;
+    left: 70%;
+  }
+}
+@media (min-width: 636px) {
+  .bg-hero-image-container {
+    height: 55vh;
   }
 }
 
@@ -371,6 +504,13 @@ footer .footer-nav ul a {
 footer .footer-nav ul a:hover {
   color: hsl(136, 65%, 51%);
 }
+@media (min-width: 880px) {
+  footer .footer-nav {
+    display: flex;
+    gap: 45px;
+    text-align: left;
+  }
+}
 footer .social-links {
   margin: 25px 0;
 }
@@ -382,6 +522,9 @@ footer .social-links .link i:hover {
   color: hsl(136, 65%, 51%);
   cursor: pointer;
 }
+footer .footer-invite-copyright {
+  flex-basis: 40%;
+}
 footer .footer-invite-copyright .req-btn {
   margin: 15px 0;
 }
@@ -390,12 +533,12 @@ footer .footer-invite-copyright span {
   color: hsl(233, 8%, 62%);
 }
 @media (min-width: 641px) {
-  footer {
+  footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  footer .footer-invite-copyright {
+  footer .container .footer-invite-copyright {
     text-align: right;
   }
 }

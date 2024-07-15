@@ -44,9 +44,9 @@
     }
 
     .features-card-container {
-.features-card {
-    max-width: 270px;
-}
+// .features-card {
+//     max-width: 270px;
+// }
 
        @include media(">640px") {
         display: grid;

@@ -1,19 +1,24 @@
-* [X] ~~*markup header with navigation system*~~ [2024-05-09]
-
+- - [x] ~~_markup header with navigation system_~~ [2024-05-09]
 
                                 <!-- CSS -->
-* [X] ~~*header request invite button with background gradient.*~~ [2024-05-10]
-        * [ ] FIXME: transition effect not working with background gradient.
-* [X] ~~*header nav link item with stunning hover effect.*~~ [2024-05-10] 
-* [X] ~~*Style the header section for mobile and desktop devices using sass.*~~ [2024-05-23]
-* [X] ~~*design hero section for mobile and desktop*~~ [2024-06-07]
-* [ ] Place hero mobile image in proper position
-* [ ] Create reasponsive for all kind of device
 
+- - [x] ~~_header request invite button with background gradient._~~ [2024-05-10]
+
+- [ ] FIXME: transition effect not working with background gradient.
+
+- - [x] ~~_header nav link item with stunning hover effect._~~ [2024-05-10]
+
+- - [x] ~~_Style the header section for mobile and desktop devices using sass._~~ [2024-05-23]
+
+- - [x] ~~_design hero section for mobile and desktop_~~ [2024-06-07]
+- - [ ] Place hero mobile image in proper position
+- - [x] ~~_Create reasponsive for all kind of device_~~ [2024-06-22]
 
                                 <!-- JS -->
 
-* [X] ~~*Toggle mobile nav list*~~ [2024-05-23] 
-        * [ ] FIXME:  give smooth animation effect on nav menu show hide
+- - [x] ~~_Toggle mobile nav list_~~ [2024-05-23]
+- - [ ] FIXME: give smooth animation effect on nav menu show hide
+* [X] ~~*FIXME: Hero text going under hero image after 700px width*~~ [2024-07-15]
+* [ ] FIXME: positioning issue with desktop intro image
 
 

@@ -1,10 +1,70 @@
 @use "./../abstracts/breakpoints" as *;
-.bg-hero-image {
-  background-image: url(/images/bg-intro-mobile.svg);
+.hero-text {
+ 
+    @include media(">700px") {
+      padding:60px 50px;
+     }
+
+  @include media(">=860px") { 
+    padding: 40px 50px;
+    text-align: left;
+  }
+  @include media(">=940px") { 
+    padding: 115px 20px;
+  }
+  @include media(">=1440px") { 
+    padding: 115px 30px;
+
+    h1 {
+      font-size: 60px;
+    }
+    .para {
+      font-size: 18px;
+    }
+  }
+
+  @include media(">=1508px") { 
+    padding: 115px 50px;
+  }
+  @include media(">=1608px") { 
+    padding: 115px 115px;
+  }
+}
+
+.bg-hero-image-container {
+
+  .bg-hero-image {
+    background-image: url(/images/bg-intro-mobile.svg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media(">700px") { 
+      height: 65vh;
+      background-image: url(/images/bg-intro-desktop.svg);
+      width: 100%;
+      background-repeat: no-repeat;
+      // object-fit: cover;
+      background-size: cover;
+      right: -20%;
+     }
+    @include media(">=860px") { 
+      height: 88vh;
+     }
+  }
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
   width: 100vw;
   height: 45vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+   @include media(">700px") {
+    height: 65vh;
+   }
   position: relative;
   z-index: 2;
 //   &::after {
@@ -27,19 +87,64 @@
 .hero-image {
   background-image: url(/images/image-mockups.png);
   position: absolute;
-  width: 100%;
+  width: 95vw;
   height: 100vh;
+  top: -28%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: contain;
-  // margin: 0 auto;
-  display: block;
-  margin-left: 10%;
+  left: 48%;
+    transform: translate(-50%, 0);
+  // margin-left: auto;
+  // margin-right: auto;
+  // left: 50%;
+  // transform: translateX(25%);
+  // display: block;
+  // margin-left: 10%;
+
+  @include media(">395px") { 
+    // height: 55vh;
+    // top: -30%;
+    max-width: 435px;
+   }
+
+   @include media(">635px") { 
+    max-width: 490px;
+   }
+
+   @include media(">700px") { 
+    max-width: 552px;
+   }
+   @include media(">=860px") { 
+    max-width: 652px;
+    left: 66%;
+    top: -15%;
+   }
+   @include media(">=940px") { 
+    max-width: 652px;
+    left: 66%;
+    top: -4%;
+   }
+   @include media(">=1060px") { 
+    max-width: 652px;
+    left: 70%;
+    
+   }
 }
 
 @include media(">635px") { 
  height: 55vh;
 }
-@include media(">700px") { 
- height: 65vh;
-}
+
+
+
+
+
+
+// image
+// img {
+//   width: 100%;
+//   position: absolute;
+//   left: 0;
+// }
 }

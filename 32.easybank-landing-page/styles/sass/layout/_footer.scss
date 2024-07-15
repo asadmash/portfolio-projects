@@ -2,59 +2,66 @@
 @use "./../abstracts/breakpoints" as *;
 
 footer {
-    text-align: center;
-    background-color: $Dark-Blue;
-    padding: 20px 30px;
-   .logo-links {
+  text-align: center;
+  background-color: $Dark-Blue;
+  padding: 20px 30px;
+  .logo-links {
     color: $Very-Light-White;
-   }
+  }
 
-   .footer-nav {
+  .footer-nav {
     ul {
-        list-style: none;
-        a{
-            text-decoration: none;
-            color: $Light-Grayish-Blue;
-            font-size: 15px;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $Light-Grayish-Blue;
+        font-size: 15px;
 
-            &:hover {
-                color:$Lime-Green; 
-            }
-        };
+        &:hover {
+          color: $Lime-Green;
+        }
+      }
     }
-   }
-   .social-links {
+
+    @include media(">=880px") {
+      display: flex;
+      gap: 45px;
+      text-align: left;
+    }
+  }
+  .social-links {
     margin: 25px 0;
     .link {
-        i {
-            font-size: 30px;
-            margin: 0 5px;
-            &:hover {
-                color: $Lime-Green;
-                cursor: pointer;
-            }
+      i {
+        font-size: 30px;
+        margin: 0 5px;
+        &:hover {
+          color: $Lime-Green;
+          cursor: pointer;
         }
+      }
     }
-   }
-   .footer-invite-copyright{
+  }
+  .footer-invite-copyright {
+    flex-basis: 40%;
     .req-btn {
-        margin: 15px 0;
-
-        
+      margin: 15px 0;
     }
-        span {
-            font-size: 12px;
-            color: $Grayish-Blue;
-        }
-   }
-
-   @include media('>640px'){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .footer-invite-copyright {
-     text-align: right;   
+    span {
+      font-size: 12px;
+      color: $Grayish-Blue;
     }
-   }
+  }
+
+  @include media(">640px") {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-invite-copyright {
+        text-align: right;
+      }
+    }
+  }
 }

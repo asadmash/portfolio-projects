@@ -12,6 +12,7 @@
 
         .para {
             margin: 25px 0;
+            max-width: 440px;
         }
 
       
@@ -31,6 +32,19 @@
 
         .bg-hero-image {
             flex-basis: 60%;
+        }
+    }
+
+    @include media(">=940px"){
+        height: 80vh;
+        .container {
+            flex-basis: 50%;
+            height: 100%;
+        }
+
+        .bg-hero-image {
+            flex-basis: 50%;
+            height: 100%;
         }
     }
 }
