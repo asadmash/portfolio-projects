@@ -17,8 +17,9 @@
                                 <!-- JS -->
 
 - - [x] ~~_Toggle mobile nav list_~~ [2024-05-23]
-- - [ ] FIXME: give smooth animation effect on nav menu show hide
+- - [ ] FIXME:PL: MEDIUM give smooth animation effect on nav menu show hide
 * [X] ~~*FIXME: Hero text going under hero image after 700px width*~~ [2024-07-15]
-* [ ] FIXME: positioning issue with desktop intro image
+* [X] ~~*FIXME: positioning issue with desktop intro image*~~ [2024-07-15]
+* [ ] FIXME:PL: LOW some minor issue remaining in intro image sizing on deferrent viewport 
 
 

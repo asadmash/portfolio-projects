@@ -415,16 +415,27 @@ header .mobile-navigation nav ul li a:hover {
 @media (min-width: 701px) {
   .bg-hero-image-container .bg-hero-image {
     height: 65vh;
-    background-image: url(/images/bg-intro-desktop.svg);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    right: -20%;
   }
 }
 @media (min-width: 860px) {
   .bg-hero-image-container .bg-hero-image {
+    background-image: url(/images/bg-intro-desktop.svg);
     height: 88vh;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1010px) {
+  .bg-hero-image-container .bg-hero-image {
+    right: -10%;
+  }
+}
+@media (min-width: 1160px) {
+  .bg-hero-image-container .bg-hero-image {
+    right: -20%;
+    height: 80vh;
   }
 }
 @media (min-width: 701px) {
