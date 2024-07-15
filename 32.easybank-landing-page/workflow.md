@@ -12,7 +12,7 @@
 
 - - [x] ~~_design hero section for mobile and desktop_~~ [2024-06-07]
 - - [ ] Place hero mobile image in proper position
-- - [x] ~~_Create reasponsive for all kind of device_~~ [2024-06-22]
+- - [x] ~~_Create reasponsive for all kind of device_~~ [2024-06-22]git
 
                                 <!-- JS -->
 
