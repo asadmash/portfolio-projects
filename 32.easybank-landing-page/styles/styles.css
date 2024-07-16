@@ -404,7 +404,7 @@ header .mobile-navigation nav ul li a:hover {
   z-index: 2;
 }
 .bg-hero-image-container .bg-hero-image {
-  background-image: url(./images/bg-intro-mobile.svg);
+  background-image: url("./../images/bg-intro-mobile.svg");
   position: absolute;
   top: 0;
   right: 0;
@@ -423,7 +423,7 @@ header .mobile-navigation nav ul li a:hover {
 }
 @media (min-width: 860px) {
   .bg-hero-image-container .bg-hero-image {
-    background-image: url(./images/bg-intro-desktop.svg);
+    background-image: url("./../images/bg-intro-desktop.svg");
     height: 88vh;
     overflow: hidden;
   }
@@ -445,7 +445,7 @@ header .mobile-navigation nav ul li a:hover {
   }
 }
 .bg-hero-image-container .hero-image {
-  background-image: url(/images/image-mockups.png);
+  background-image: url("./../images/image-mockups.png");
   position: absolute;
   width: 95vw;
   height: 100vh;

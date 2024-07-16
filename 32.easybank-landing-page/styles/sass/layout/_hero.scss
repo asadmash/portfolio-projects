@@ -34,7 +34,7 @@
 .bg-hero-image-container {
 
   .bg-hero-image {
-    background-image: url(./images/bg-intro-mobile.svg);
+    background-image: url("./../images/bg-intro-mobile.svg");
     position: absolute;
     top: 0;
     right: 0;
@@ -53,7 +53,7 @@
    
      }
     @include media(">=860px") {
-      background-image: url(./images/bg-intro-desktop.svg); 
+      background-image: url("./../images/bg-intro-desktop.svg"); 
       height: 88vh;
       overflow: hidden;
      }
@@ -94,7 +94,7 @@
 
 
 .hero-image {
-  background-image: url(/images/image-mockups.png);
+  background-image: url("./../images/image-mockups.png");
   position: absolute;
   width: 95vw;
   height: 100vh;
