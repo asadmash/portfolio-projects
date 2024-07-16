@@ -117,6 +117,7 @@ header .container .desktop-navigation ul li a.hover-link:hover::after {
 header .mobile-navigation {
   display: none;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 header .mobile-navigation nav {
   position: absolute;
@@ -422,7 +423,7 @@ header .mobile-navigation nav ul li a:hover {
 }
 @media (min-width: 860px) {
   .bg-hero-image-container .bg-hero-image {
-    background-image: url(/images/bg-intro-desktop.svg);
+    background-image: url(./images/bg-intro-desktop.svg);
     height: 88vh;
     overflow: hidden;
   }

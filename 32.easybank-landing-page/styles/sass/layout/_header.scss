@@ -86,6 +86,7 @@ header {
   .mobile-navigation {
     display: none;
 cursor: pointer;
+transition: all 200ms ease-in-out;
     nav {
       position: absolute;
       top: 100%;

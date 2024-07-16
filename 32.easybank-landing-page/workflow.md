@@ -23,6 +23,7 @@
 
 - - [x] ~~_Toggle mobile nav list_~~ [2024-05-23]
 - - [ ] FIXME:PL: MEDIUM give smooth animation effect on nav menu show hide.
-* [ ] FIXME:PL: HIGH nav menu close does not working.
+* [X] ~~*FIXME:PL: HIGH nav menu close does not working.*~~ [2024-07-16]
 
+* [ ] FIXME:PL: HIGH no image showing in live site
 
