@@ -404,7 +404,7 @@ header .mobile-navigation nav ul li a:hover {
   z-index: 2;
 }
 .bg-hero-image-container .bg-hero-image {
-  background-image: url(/images/bg-intro-mobile.svg);
+  background-image: url(./images/bg-intro-mobile.svg);
   position: absolute;
   top: 0;
   right: 0;
