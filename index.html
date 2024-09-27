@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="src/script.js" defer></script>
+
+    <title>Bookmark landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <header class="my-4 mx-4 flex">
+    <!-- logo and buttons -->
+    <div id="int-header" class="flex justify-between w-full items-center">
+      <!-- Bookmark logo -->
+      <div id="logo">
+        <img src="./images/logo-bookmark.svg" alt="bookmark-logo" />
+      </div>
+      <div id="mobile-navigation-toggle">
+        <div class="mobile-nav-logo-open">
+          <img src="./images/icon-hamburger.svg" alt="hamburger" />
+        </div>
+        <div class="mobile-nav-logo-close">
+          <img src="./images/icon-close.svg" alt="close-btn" class="hidden" />
+        </div>
+      </div>
+    </div>
+    <!-- navigation bar -->
+    <nav>
+      <div id="mobile-navigation" class="hidden">
+        <ul>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="desktop-navigation" class="hidden">
+        <ul>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <body class="box-border m-0 text-center">
+    <section id="main">
+      <!-- ************************************ INTRO SECTION *************************************** -->
+      <section id="intro-section" class="my-10">
+        <div class="container px-2">
+          <div id="intro-image">
+            <img src="./images/illustration-hero.svg" alt="hero-image" />
+          </div>
+          <div id="intro-text" class="">
+            <h1 class="text-2xl font-bold text-center text-dark-blue">
+              A Simple Bookmark Manager
+            </h1>
+            <p class="text-grayish-blue">
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
+            <div id="get-btns" class="flex gap-3 justify-center">
+              <button
+                id="get-chrome-btn"
+                class="text-white font-semibold bg-soft-blue px-2 py-2 rounded-md border-2 border-transparent hover:text-soft-blue focus:text-soft-blue hover:bg-light-grayish-blue focus:bg-light-grayish-blue hover:border-soft-blue focus:border-soft-blue"
+              >
+                Get it on Chrome
+              </button>
+              <button
+                id="get-firefox-btn"
+                class="bg-light-grayish-blue font-semibold px-2 py-2 rounded-md shadow-md border-2 border-transparent hover:border-dark-blue focus:border-dark-blue"
+              >
+                Get it on Firefox
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ******************* INTRO SECTION ******************************** -->
+
+      <!-- ******************* FEATURES SECTION ******************************** -->
+      <section id="features-section" class="my-20">
+        <div id="features-container" class="px-2">
+          <h2 class="text-2xl font-bold">Features</h2>
+          <p class="text-grayish-blue mt-2">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+          <div id="features-navigation">
+            <div id="features-sliders" class="my-10">
+              <ul>
+                <li class="border-solid border-y-2 text-center">
+                  <p
+                    class="inline-block text-center relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-bg-soft-red after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+                  >
+                    <a
+                      href="#"
+                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red"
+                    >
+                      Simple Bookmarking
+                    </a>
+                  </p>
+                </li>
+                <li class="border-solid border-b-2 text-center">
+                  <p
+                    class="inline-block text-center relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-bg-soft-red after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+                  >
+                    <a
+                      href="#"
+                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red"
+                    >
+                      Speedy Searching
+                    </a>
+                  </p>
+                </li>
+                <li class="border-solid border-b-2 text-center">
+                  <p
+                    class="inline-block text-center relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-bg-soft-red after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+                  >
+                    <a
+                      href="#"
+                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red"
+                    >
+                      Easy Sharing
+                    </a>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="features-slides" class="relative">
+            <div
+              id="feature-background-design"
+              class="h-[40%] w-[90%] bg-soft-blue absolute -left-4 top-20 -z-10 rounded-br-[100px]"
+            ></div>
+            <div class="slide simple-bookmarking Z-10">
+              <div class="slide-container h-[40%] w-[100%] px-2">
+                <img
+                  src="./images/illustration-features-tab-1.svg"
+                  alt="simple-bookmarking"
+                  class="w-[100%] h-[100%]"
+                />
+              </div>
+              <div class="slide-text">
+                <h3 class="text-2xl font-bold mt-28 mb-2">
+                  Bookmark in one click
+                </h3>
+                <p class="text-grayish-blue px-2">
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <!-- <button>More</button> -->
+              </div>
+            </div>
+            <div class="slide hidden">
+              <img
+                src="./images/illustration-features-tab-2.svg"
+                alt="speed-searching"
+              />
+              <div class="slide-text">
+                <h3 class="text-2xl font-bold mt-28 mb-2">Info Intelligent search</h3>
+                 <p class="text-grayish-blue px-2">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <button>More Info</button>
+              </div>
+            </div>
+            <div class="slide hidden">
+              <img
+                src="./images/illustration-features-tab-3.svg"
+                alt="easy-sharing"
+              />
+              <div class="slide-text">
+                <h3 class="text-2xl font-bold mt-28 mb-2">Share your bookmarks</h3>
+                 <p class="text-grayish-blue px-2">
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <button>More Info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ******************* FEATURES SECTION ******************************** -->
+
+      <!-- ******************* EXTENSION SECTION ******************************** -->
+      <section id="extension-section" class="text-center">
+        <div class="container px-2">
+          <div id="extension-download-description">
+            <h2 class="font-bold text-xl">Download the extension</h2>
+            <p class="text-grayish-blue">
+              We’ve got more browsers in the pipeline. Please do let us know if
+              you’ve got a favourite you’d like us to prioritize.
+            </p>
+          </div>
+          <!-- EXTENSION-CARD-CONTAINER -->
+          <div
+            id="install-extension"
+            class="flex justify-center items-center self-center flex-col"
+          >
+            <!-- EXTENSION-CARD -->
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72"
+            >
+              <div class="extension-logo flex justify-center">
+                <img src="./images/logo-chrome.svg" alt="chorme" />
+              </div>
+              <h3 class="add-to font-bold text-xl mt-8 mb-1">Add to Chrome</h3>
+              <p class="version-no text-grayish-blue">Minimum version 62</p>
+              <div class="dashed-line flex relative my-6 w-100 right-0">
+                <svg
+                  width="350px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="4"
+                  class="absolute"
+                >
+                  <path
+                    fill="#495DCF"
+                    fill-opacity=".2"
+                    fill-rule="evenodd"
+                    d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                  />
+                </svg>
+              </div>
+              <button
+                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white"
+              >
+                Add & Install Extension
+              </button>
+            </div>
+            <!-- EXTENSION-CARD -->
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72"
+            >
+              <div class="extension-logo flex justify-center">
+                <img src="./images/logo-firefox.svg" alt="firefox" />
+              </div>
+              <h3 class="add-to font-bold text-xl mt-8 mb-1">Add to Firefox</h3>
+              <p class="version-no text-grayish-blue">Minimum version 55</p>
+              <div class="dashed-line flex relative my-4">
+                <svg
+                  width="320px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="4"
+                  class="absolute"
+                >
+                  <path
+                    fill="#495DCF"
+                    fill-opacity=".2"
+                    fill-rule="evenodd"
+                    d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                  />
+                </svg>
+              </div>
+              <button
+                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white"
+              >
+                Add & Install Extension
+              </button>
+            </div>
+            <!-- EXTENSION-CARD -->
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72"
+            >
+              <div class="extension-logo flex justify-center">
+                <img src="./images/logo-opera.svg" alt="opera" />
+              </div>
+              <h3 class="add-to font-bold text-xl mt-8 mb-1">
+                Extension Add to Opera
+              </h3>
+              <p class="version-no text-grayish-blue">Minimum version 46</p>
+              <div class="dashed-line flex relative my-4">
+                <svg
+                  width="320px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="4"
+                  class="absolute"
+                >
+                  <path
+                    fill="#495DCF"
+                    fill-opacity=".2"
+                    fill-rule="evenodd"
+                    d="M0 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm280 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-18 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-17 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm122 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-35 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-70 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM88 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM70 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM53 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM35 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                  />
+                </svg>
+              </div>
+              <button
+                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white"
+              >
+                Add & Install Extension
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ******************* EXTENSION SECTION ******************************** -->
+
+      <!-- ******************* FAQ SECTION ******************************** -->
+      <section id="faq-section" class="my-32">
+        <div class="container px-4">
+          <h2 class="font-bold text-xl">Frequently Asked Questions</h2>
+          <p class="text-grayish-blue mt-4">
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+          <div id="accordion-container" class="my-10 text-left flex flex-col">
+            <button
+              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-2 flex justify-between items-center"
+            >
+              What is Bookmark?
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="#5267DF"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis.
+            </div>
+            <button
+              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-2 flex justify-between items-center"
+            >
+              How can I request a new browser?
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="#5267DF"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </div>
+            <button
+              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-2 flex justify-between items-center"
+            >
+              Is there a mobile app?
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="#5267DF"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </div>
+            <button
+              class="accordion cursor-pointer w-full !text-left text-lg border-y py-2 flex justify-between font-bold items-center"
+            >
+              What about other Chromium browsers?
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="#5267DF"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.
+            </div>
+          </div>
+          <button
+            class="bg-soft-blue text-light-grayish-blue px-4 py-2 rounded hover:bg-dark-blue focus:bg-dark-blue"
+          >
+            More Info
+          </button>
+        </div>
+      </section>
+
+      <!-- ******************* FAQ SECTION ******************************** -->
+
+      <!-- ******************* NEWSLETTER SECTION*******************  -->
+      <section id="newsletter" class="bg-soft-blue text-white text-center">
+        <div class="container pt-16 pb-8 px-4">
+          <div class="joined">
+            <p class="uppercase tracking-[.2em] text-sm">
+              35,000+ already joined
+            </p>
+          </div>
+          <h3 class="pt-2 pb-4 font-bold text-2xl">
+            Stay up-to-date with what we’re doing
+          </h3>
+          <div class="contact-form flex flex-col gap-4">
+            <!-- FIXME: PLACEHOLDER CUSTOM COLOR NOT WORKING -->
+            <input
+              type="text"
+              class="placeholder:text-text-grayish-blue text-dark-blue rounded-md py-2 px-2"
+              placeholder="Enter your email address"
+            />
+
+            <button
+              class="contact-btn bg-bg-soft-red border-2 border-transparent hover:font-bold hover:bg-light-grayish-blue hover:text-bg-soft-red hover:border-bg-soft-red focus:bg-light-grayish-blue focus:text-bg-soft-red focus:border-bg-soft-red focus:font-bold py-2 rounded-md"
+            >
+              contact us
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ******************* NEWSLETTER SECTION *******************  -->
+      <!-- ******************* FOOTER SECTION *******************  -->
+      <footer id="footer-section" class="bg-dark-blue">
+        <div class="container flex flex-col justify-center items-center py-8">
+          <div class="logo">
+            <img src="/images/logo-bookmark-footer.svg" alt="" />
+          </div>
+          <div class="footer-nav text-light-grayish-blue py-6">
+            <ul class="flex flex-col gap-6">
+              <li><a href="#" class="hover:text-bg-soft-red">FEATURES</a></li>
+              <li><a href="#" class="hover:text-bg-soft-red">PRICING</a></li>
+              <li><a href="#" class="hover:text-bg-soft-red">CONTACT</a></li>
+            </ul>
+          </div>
+          <div class="social-links flex gap-4">
+            <a href="#" class="hover:text-bg-soft-red">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  class="hover:fill-bg-soft-red"
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="hover:text-bg-soft-red">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                <path
+                  class="hover:fill-bg-soft-red"
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <p class="attribution text-light-grayish-blue text-xs">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#" class="text-bg-soft-red">asadmash</a>.
+        </p>
+      </footer>
+      <!-- ******************* FOOTER SECTION *******************  -->
+    </section>
+  </body>
+</html>
