@@ -1,0 +1,44 @@
+@use '../util/__util' as *;
+#riser {
+   position: absolute;
+   top: 32%;
+   left: 50%;
+   transform: translateX(-50%);
+padding-top: 45px;
+text-align: center;
+   #craft-logo {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+   }
+
+   h1 {
+    text-transform: capitalize;
+   }
+    
+   p {
+    margin: 10px 0 30px;
+   }
+
+   #riser-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #bookmark {
+        display: flex;
+        align-items: center;
+        background-color: var(--Darkgray);
+        border-radius: 100px;
+        p {
+            display: none;
+            margin: 0;
+            padding: 17px 10px;
+           @include breakpoint(medium) {
+            display: inline-block;
+           }
+        }
+    }
+   }
+}

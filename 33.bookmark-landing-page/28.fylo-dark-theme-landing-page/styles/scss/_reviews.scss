@@ -1,0 +1,48 @@
+#reviews {
+    margin-top: 120px;
+margin-bottom: 200px;
+    .review-item {
+        position: relative;
+        text-align: left;
+        padding: 40px 35px 40px 25px;
+        background-color: $DarkBlue-testimonials-background;
+        width: 90%;
+        max-width: 500px;
+
+        .profile {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+            align-items: center;
+            
+            .profile-img {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                   
+}
+            }
+            
+        }
+    }
+
+    .review-item:nth-child(1)::before {
+        content: '';
+        background-image: url("../../images/bg-quotes.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: -30px;
+        left: 0;
+        z-index: 1;
+    }
+}

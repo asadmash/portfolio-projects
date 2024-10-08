@@ -34,7 +34,7 @@ body {
   z-index: 9999;
   width: 40vw;
   height: 40vh;
-  background-color: #fefded;
+  background-color: #FEFDED;
   display: flex;
   padding: 0 30px;
   flex-direction: row;
@@ -156,8 +156,7 @@ header #nav-area nav ul li a {
   border-radius: 5px;
   padding: 0 5px;
 }
-header #nav-area nav ul li a:hover,
-header #nav-area nav ul li a:focus {
+header #nav-area nav ul li a:hover, header #nav-area nav ul li a:focus {
   color: hsl(220, 13%, 13%);
   transform: scale(1.15);
   background-color: hsl(26, 100%, 55%);
@@ -224,8 +223,8 @@ header .mobile-menu .close-btn {
   margin-top: 10px;
   margin-left: 10px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 header .mobile-menu .close-btn:hover svg {
@@ -261,8 +260,7 @@ header #user #profile {
   border-radius: 50%;
   transition: all 200ms ease-in-out;
 }
-header #user #profile:hover,
-header #user #profile:focus {
+header #user #profile:hover, header #user #profile:focus {
   border: 2px solid hsl(26, 100%, 55%);
   transform: scale(1.25);
 }
@@ -653,8 +651,8 @@ header #user-profile .user-description p {
   padding: 10px 15px;
   border-radius: 8px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #product #order-taker #order-quantity-box .decrease,
 #product #order-taker #order-quantity-box .increase {
@@ -682,7 +680,6 @@ header #user-profile .user-description p {
 #product .add-cart-btn button i {
   margin-right: 10px;
 }
-#product .add-cart-btn button:hover,
-#product .add-cart-btn button:focus {
+#product .add-cart-btn button:hover, #product .add-cart-btn button:focus {
   background-color: hsl(26, 100%, 45%);
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

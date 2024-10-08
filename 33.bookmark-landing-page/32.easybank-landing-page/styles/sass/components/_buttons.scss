@@ -1,0 +1,24 @@
+@use "./../abstracts/breakpoints" as *;
+@use '../abstracts/colors' as *;
+
+.req-btn {
+    flex-basis: 25%;
+    background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+    border: none;
+    color: $Very-Light-White;
+    height: 46px;
+    width: 160px;
+    border-radius: 40px;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-image: linear-gradient(to left, $Lime-Green, $Bright-Cyan);
+      font-size: 16px;
+      // background-image: linear-gradient(to left,$Bright-Cyan, $Lime-Green);
+    }
+
+    @include media("<801px") {
+      flex-basis: 30%;
+    }
+  }
