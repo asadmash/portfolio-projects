@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./app/app.js" defer></script>
+
+    <title>E-commerce product page</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="nav-area">
+        <div id="mobile-toggle">
+          <img src="./images/icon-menu.svg" alt="" />
+        </div>
+        <div id="snekers-logo">
+          <img src="./images/logo.svg" alt="snekers" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="mobile-menu">
+        <div class="close-btn menu-close">
+          <svg
+            fill="#000000"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div id="user">
+        <div id="cart">
+          <img src="./images/icon-cart.svg" alt="cart" />
+        </div>
+
+        <div id="profile">
+          <img src="./images/image-avatar.png" alt="" />
+        </div>
+
+        <!-- cart popup -->
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <hr />
+          <div class="cart-item">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="item-img"
+            />
+            <div class="item-description">
+              <h3>Fall Limited Edition Sneakers</h3>
+              <div class="item-price">
+                <div class="cart-item-quantity">
+                  $125 x <span class="cart-item-count">1</span>
+                </div>
+                <div class="cart-item-price">$125</div>
+              </div>
+            </div>
+            <button class="cart-del">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+
+        <!-- user profile popup -->
+        <div id="user-profile">
+          <div class="user-image">
+            <img src="./images/image-avatar.png" alt="avatar" />
+          </div>
+          <div class="user-description">
+            <h2>User Name : John Doe</h2>
+            <p>Email : john@doe.gmail.com</p>
+            <p>Address : Dhaka, Bangladesh</p>
+            <h5>Member Since : 01/01/2022</h5>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- content area -->
+    <section class="container">
+      <section id="gallary">
+        <div class="slider">
+          <button class="btn prev-btn">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <div class="slide">
+            <img src="./images/image-product-1.jpg" alt="product1" />
+          </div>
+          <div class="slide">
+            <img src="./images/image-product-2.jpg" alt="product2" />
+          </div>
+          <div class="slide">
+            <img src="./images/image-product-3.jpg" alt="product3" />
+          </div>
+          <div class="slide">
+            <img src="./images/image-product-4.jpg" alt="product3" />
+          </div>
+          <button class="btn next-btn">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+
+        <!-- Direct image thumb -->
+        <div class="thumbnail-container">
+          <div class="thum thum1">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="thum thum2">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="thum thum3">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="thum thum4">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- overlay gallery -->
+      <section id="ov-gallary" class="hide">
+        <div class="close-btn ov-close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="ov-slider">
+          <button class="btn prev-btn ov-prev-btn">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <div class="ov-slide">
+            <img src="./images/image-product-1.jpg" alt="product1" />
+          </div>
+          <div class="ov-slide">
+            <img src="./images/image-product-2.jpg" alt="product2" />
+          </div>
+          <div class="ov-slide">
+            <img src="./images/image-product-3.jpg" alt="product3" />
+          </div>
+          <div class="ov-slide">
+            <img src="./images/image-product-4.jpg" alt="product3" />
+          </div>
+          <button class="btn next-btn ov-next-btn">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+
+        <!-- Direct image thumb -->
+        <div class="thumbnail-container">
+          <div class="thum ov-thum thum1">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="thum ov-thum thum2">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="thum ov-thum thum3">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="thum ov-thum thum4">
+            <a href="#">
+              <img
+                class="thumb-img"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- product area -->
+      <section id="product">
+        <div id="product-description">
+          <div id="brand">Sneaker Company</div>
+          <h1 id="title">Fall Limited Edition Sneakers</h1>
+          <div id="description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </div>
+        </div>
+        <div id="product-order">
+          <div id="price">
+            <div id="discount-container">
+              <h2 class="discount-price">$125</h2>
+              <h3 class="discount">50%</h3>
+            </div>
+            <h3 class="actual-price"><s>$250</s></h3>
+          </div>
+          <div id="order-taker">
+            <div id="order-quantity-box">
+              <div class="decrease">-</div>
+              <div class="count">1</div>
+              <div class="increase">+</div>
+            </div>
+            <div class="add-cart-btn">
+              <button>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="checkout-confirmation hide">
+      <div class="confirmation-container">
+        <div class="greetings-close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <h1 class="confirmation-msg">
+          Congrats! your order has been placed successfully.
+        </h1>
+        <div class="confirm-image">
+          <i class="fa-regular fa-circle-check"></i>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/asadmash">asadmash</a>.
+    </div>
+  </body>
+</html>

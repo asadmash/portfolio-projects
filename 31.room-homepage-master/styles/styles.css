@@ -1,0 +1,332 @@
+/**
+*
+* Testing
+*
+**/
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  display: grid;
+  position: relative;
+}
+body .main-container {
+  display: grid;
+  height: auto;
+}
+@media (min-width: 850px) {
+  body .main-container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "header header header header header header header discover discover discover discover discover" "header header header header header header header discover discover discover discover discover" "header header header header header header header discover discover discover discover discover" "header header header header header header header discover discover discover discover discover" "banner2 banner2 banner2 about about about about about about banner3 banner3 banner3" "banner2 banner2 banner2 about about about about about about banner3 banner3 banner3";
+    height: 98vh;
+  }
+}
+body .attribution {
+  position: fixed;
+  bottom: 0px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media (max-width: 849px) {
+  body .main-container {
+    max-width: 500px;
+    place-self: center;
+  }
+}
+
+*.hide {
+  display: none !important;
+}
+
+* p {
+  color: hsl(0, 0%, 27%);
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.92rem + 0.4vw, 1.4rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* hide {
+  display: none;
+}
+
+header {
+  background-image: url("./../../../images/mobile-image-hero-1.jpg");
+  z-index: 11111;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-top: 106.25%;
+  position: relative;
+}
+@media (min-width: 850px) {
+  header {
+    grid-area: header;
+    height: 100%;
+    padding-top: 0;
+  }
+}
+header .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 0;
+  width: 100%;
+  /* height: 40px; */
+  padding: 0 10px;
+}
+header .container nav {
+  display: flex;
+  padding-top: 25px;
+}
+@media (min-width: 500px) {
+  header .container nav {
+    justify-content: space-between;
+  }
+  header .container nav::nth-child(1) {
+    justify-items: flex-start;
+  }
+}
+@media (min-width: 500px) {
+  header .container nav .hamburger-menu {
+    display: none;
+  }
+}
+header .container nav .logo {
+  margin: 0 auto;
+}
+@media (min-width: 500px) {
+  header .container nav .logo {
+    margin: 18px 20px;
+    z-index: 9999;
+  }
+}
+header .container nav ul {
+  display: none;
+  z-index: 9999;
+}
+header .container nav ul li {
+  list-style: none;
+  padding: 10px 15px;
+}
+header .container nav ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+header .container nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
+}
+@media (min-width: 500px) {
+  header .container nav ul li a {
+    font-size: 22px;
+  }
+}
+header .container nav ul li a:hover {
+  font-size: 30px;
+  color: hsl(0, 100%, 100%);
+  border-bottom: 3px solid hsl(0, 0%, 100%);
+}
+@media (min-width: 500px) {
+  header .container nav ul {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    flex-basis: 95%;
+  }
+}
+header .container .toggle-menu {
+  width: 100%;
+  height: 80px;
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .toggle-menu ul {
+  display: flex;
+}
+header .container .toggle-menu ul li {
+  list-style: none;
+  padding: 0 8px;
+}
+header .container .toggle-menu ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  font-weight: bold;
+}
+header .slider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+header .slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  bottom: 0;
+  right: 0;
+}
+header .slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.discover {
+  padding: 50px 30px;
+  position: relative;
+}
+@media (min-width: 850px) {
+  .discover {
+    grid-area: discover;
+    padding: 50px 45px;
+  }
+}
+@media (min-width: 980px) {
+  .discover {
+    padding: 50px 65px;
+  }
+}
+@media (min-width: 1440px) {
+  .discover {
+    padding: 70px 100px;
+  }
+}
+.discover h1 {
+  font-size: 1.5625rem;
+  font-size: clamp(1.5625rem, 1.475rem + 0.4375vw, 2rem);
+}
+.discover p {
+  margin: 20px 0;
+}
+.discover * svg {
+  transition: all 250ms ease-in-out;
+}
+.discover * svg > path {
+  transition: all 250ms ease-in-out;
+}
+.discover button {
+  border: none;
+  margin-top: 10px;
+  background-color: transparent;
+}
+.discover button a {
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: hsl(0, 0%, 0%);
+  transition: all 250ms ease-in-out;
+}
+.discover button:hover {
+  cursor: pointer;
+}
+.discover button:hover a {
+  color: hsl(0, 0%, 63%);
+}
+.discover button:hover svg > path {
+  fill: hsl(0, 0%, 63%);
+}
+.discover button:hover svg {
+  margin-left: 10px;
+}
+
+.banner-2 {
+  background-image: url("../../../images/image-about-dark.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 72.7272727273%;
+  height: 0;
+}
+@media (min-width: 850px) {
+  .banner-2 {
+    grid-area: banner2;
+    height: 100%;
+  }
+}
+
+.banner-3 {
+  background: url(/images/image-about-light.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 72.7272727273%;
+  height: 0;
+}
+@media (min-width: 850px) {
+  .banner-3 {
+    grid-area: banner3;
+    height: 100%;
+    padding-top: 0;
+  }
+}
+
+.about-fortune {
+  padding: 50px 30px;
+}
+.about-fortune h2 {
+  font-size: 1.375rem;
+  font-size: clamp(1.375rem, 1.3rem + 0.375vw, 1.75rem);
+  margin-bottom: 15px;
+}
+@media (min-width: 850px) {
+  .about-fortune {
+    grid-area: about;
+    padding: 40px 65px;
+  }
+}
+@media (min-width: 1440px) {
+  .about-fortune {
+    padding: 50px 100px;
+  }
+}
+
+.slider-buttons {
+  width: 160px;
+  height: 80px;
+  position: absolute;
+  display: flex;
+  left: 0;
+  bottom: 0;
+}
+.slider-buttons .btn {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  background-color: hsl(0, 0%, 0%);
+  transition: all 250ms ease-in-out;
+}
+.slider-buttons .btn:hover {
+  background: hsl(0, 0%, 27%);
+}
+@media (max-width: 849px) {
+  .slider-buttons {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */

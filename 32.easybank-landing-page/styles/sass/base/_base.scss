@@ -1,0 +1,30 @@
+@use "../abstracts/colors" as *;
+@use "./../abstracts/breakpoints" as *;
+
+// Body Copy
+
+
+* body {
+font-size: 18px; 
+font-family: "Public Sans", sans-serif;
+font-weight: 400;
+font-style: normal;
+width: 100%;
+height: auto;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+// *p {
+//     font-size: 1rem;
+// font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+// }
+*p {
+    font-size: 1rem;
+// font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+}
+
+// Font
+

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    .root{
+    --soft-blue: hsl(231, 69%, 60%);
+    --soft-red: 0deg 94% 66%;
+    --grayish-blue: hsl(229, 8%, 60%);
+    --very-dark-blue: hsl(229, 31%, 21%);
+
+
+    }
+}
+
+.bg-soft-blue {
+   background-color: hsl(231, 69%, 60%); 
+}
+.bg-soft-red {
+    background-color: #fa5757;
+}
+.bg-light-grayish-blue {
+    background-color: hsl(240, 24%, 96%);
+}
+
+.text-soft-blue {
+    color: hsl(231, 69%, 60%); 
+ }
+.text-grayish-blue {
+    color: #9194a1;
+}
+
+.dark-blue {
+    color: hsl(229, 31%, 21%);
+
+}

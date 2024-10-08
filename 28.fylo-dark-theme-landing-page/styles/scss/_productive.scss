@@ -1,0 +1,53 @@
+@import "./color";
+#productive {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 260px;
+  .productive-img {
+    max-width: 450px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .productive-text {
+    h2 {
+      margin: 80px 0 30px;
+    }
+    p {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      color: $Cyan-inside-call-to-action-gradient;
+      border-bottom: 1px solid $Cyan-inside-call-to-action-gradient;
+      padding: 2px;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -ms-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      i{
+        margin-left: 2px;
+        margin-bottom: 3px;
+        font-size: 16px;
+      }
+
+      &:hover {
+        color: $Blue-inside-call-to-action-gradient;
+        border-bottom: 1px solid $Blue-inside-call-to-action-gradient;
+
+        i{
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
