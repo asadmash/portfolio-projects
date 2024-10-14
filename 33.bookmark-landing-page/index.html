@@ -28,79 +28,72 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
   </head>
-  <body class="box-border m-0 text-center mx-auto overflow-x-hidden">
-    <header class="my-4 mx-4 flex overflow-x-none">
-      <!-- logo and buttons -->
-      <div id="int-header" class="flex justify-between w-full items-center">
-        <!-- Bookmark logo -->
-        <div id="logo">
-          <img src="./images/logo-bookmark.svg" alt="bookmark-logo" />
+  <header class="my-4 mx-4 flex">
+    <!-- logo and buttons -->
+    <div id="int-header" class="flex justify-between w-full items-center">
+      <!-- Bookmark logo -->
+      <div id="logo">
+        <img src="./images/logo-bookmark.svg" alt="bookmark-logo" />
+      </div>
+      <div id="mobile-navigation-toggle">
+        <div class="mobile-nav-logo-open">
+          <img src="./images/icon-hamburger.svg" alt="hamburger" />
         </div>
-        <div id="mobile-navigation-toggle">
-          <div class="mobile-nav-logo-open">
-            <img src="./images/icon-hamburger.svg" alt="hamburger" />
-          </div>
-          <div class="mobile-nav-logo-close">
-            <img src="./images/icon-close.svg" alt="close-btn" class="hidden" />
-          </div>
+        <div class="mobile-nav-logo-close">
+          <img src="./images/icon-close.svg" alt="close-btn" class="hidden" />
         </div>
       </div>
-      <!-- navigation bar -->
-      <nav class="absolute w-full h-full overflow-auto -left-2 -right-4 -top-2">
-        <div id="mobile-navigation" class="flex justify-center items-center p-2 bg-dark-blue/90 h-full snap-none">
-          <ul class="mt-16 text-white uppercase w-full px-4">
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#">Features</a>
-            </li>
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#">Pricing</a>
-            </li>
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#">Contact</a>
-            </li>
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-  
-        <div id="desktop-navigation" class="hidden">
-          <ul>
-            <li>
-              <a href="#">Features</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <section id="main" class=" overflow-x-hidden">
+    </div>
+    <!-- navigation bar -->
+    <nav>
+      <div id="mobile-navigation" class="hidden">
+        <ul>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="desktop-navigation" class="hidden">
+        <ul>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <body class="box-border m-0 text-center">
+    <section id="main">
       <!-- ************************************ INTRO SECTION *************************************** -->
-      <section id="intro-section" class="my-10 overflow-x-hidden">
+      <section id="intro-section" class="my-10">
         <div class="container px-2">
-          <!-- this background desing causing entire page horizontal scroll issue because it had -right-4px value -->
-            <div
-              id="intro-background-design"
-              class="relative h-full w-full bg-soft-blue right-0  -z-10 rounded-bl-[100px]"
-            >
-            <div id="intro-image" class=" ">
-              <img src="./images/illustration-hero.svg" alt="hero-image" class="ml-4"/>
-            </div>
+          <div id="intro-image">
+            <img src="./images/illustration-hero.svg" alt="hero-image" />
           </div>
-          
-          <div id="intro-text" class="mt-24">
-            <h1 class="text-3xl font-bold text-center text-dark-blue">
+          <div id="intro-text" class="">
+            <h1 class="text-2xl font-bold text-center text-dark-blue">
               A Simple Bookmark Manager
             </h1>
-            <p class="text-grayish-blue my-6 px-8">
+            <p class="text-grayish-blue">
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly. Try it
               for free.
@@ -128,7 +121,7 @@
       <section id="features-section" class="my-20">
         <div id="features-container" class="px-2">
           <h2 class="text-2xl font-bold">Features</h2>
-          <p class="text-grayish-blue mt-2  px-6">
+          <p class="text-grayish-blue mt-2">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
@@ -192,7 +185,7 @@
                 <h3 class="text-2xl font-bold mt-28 mb-2">
                   Bookmark in one click
                 </h3>
-                <p class="text-grayish-blue px-6">
+                <p class="text-grayish-blue px-2">
                   Organize your bookmarks however you like. Our simple
                   drag-and-drop interface gives you complete control over how
                   you manage your favourite sites.
@@ -206,10 +199,8 @@
                 alt="speed-searching"
               />
               <div class="slide-text">
-                <h3 class="text-2xl font-bold mt-28 mb-2">
-                  Info Intelligent search
-                </h3>
-                <p class="text-grayish-blue px-2">
+                <h3 class="text-2xl font-bold mt-28 mb-2">Info Intelligent search</h3>
+                 <p class="text-grayish-blue px-2">
                   Our powerful search feature will help you find saved sites in
                   no time at all. No need to trawl through all of your
                   bookmarks.
@@ -223,10 +214,8 @@
                 alt="easy-sharing"
               />
               <div class="slide-text">
-                <h3 class="text-2xl font-bold mt-28 mb-2">
-                  Share your bookmarks
-                </h3>
-                <p class="text-grayish-blue px-2">
+                <h3 class="text-2xl font-bold mt-28 mb-2">Share your bookmarks</h3>
+                 <p class="text-grayish-blue px-2">
                   Easily share your bookmarks and collections with others.
                   Create a shareable link that you can send at the click of a
                   button.
@@ -243,8 +232,8 @@
       <section id="extension-section" class="text-center">
         <div class="container px-2">
           <div id="extension-download-description">
-            <h2 class="font-bold text-2xl mb-2">Download the extension</h2>
-            <p class="text-grayish-blue my-2 px-6">
+            <h2 class="font-bold text-xl">Download the extension</h2>
+            <p class="text-grayish-blue">
               We’ve got more browsers in the pipeline. Please do let us know if
               you’ve got a favourite you’d like us to prioritize.
             </p>
@@ -255,7 +244,9 @@
             class="flex justify-center items-center self-center flex-col"
           >
             <!-- EXTENSION-CARD -->
-            <div class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6">
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72"
+            >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-chrome.svg" alt="chorme" />
               </div>
@@ -283,7 +274,9 @@
               </button>
             </div>
             <!-- EXTENSION-CARD -->
-            <div class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6">
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72"
+            >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-firefox.svg" alt="firefox" />
               </div>
@@ -311,7 +304,9 @@
               </button>
             </div>
             <!-- EXTENSION-CARD -->
-            <div class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6">
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72"
+            >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-opera.svg" alt="opera" />
               </div>
@@ -348,14 +343,14 @@
       <!-- ******************* FAQ SECTION ******************************** -->
       <section id="faq-section" class="my-32">
         <div class="container px-4">
-          <h2 class="font-bold text-2xl">Frequently Asked Questions</h2>
-          <p class="text-grayish-blue mt-4 px-6">
+          <h2 class="font-bold text-xl">Frequently Asked Questions</h2>
+          <p class="text-grayish-blue mt-4">
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
           </p>
           <div id="accordion-container" class="my-10 text-left flex flex-col">
             <button
-              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-4 flex justify-between items-center"
+              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-2 flex justify-between items-center"
             >
               What is Bookmark?
               <div>
@@ -375,7 +370,7 @@
               quis quam ornare mattis.
             </div>
             <button
-              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-4 flex justify-between items-center"
+              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-2 flex justify-between items-center"
             >
               How can I request a new browser?
               <div>
@@ -398,7 +393,7 @@
               Suspendisse imperdiet.
             </div>
             <button
-              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-4 flex justify-between items-center"
+              class="accordion cursor-pointer w-full !text-left font-bold text-lg border-y py-2 flex justify-between items-center"
             >
               Is there a mobile app?
               <div>
@@ -419,7 +414,7 @@
               sollicitudin ex et ultricies bibendum.
             </div>
             <button
-              class="accordion cursor-pointer w-full !text-left text-lg border-y py-4 flex justify-between font-bold items-center"
+              class="accordion cursor-pointer w-full !text-left text-lg border-y py-2 flex justify-between font-bold items-center"
             >
               What about other Chromium browsers?
               <div>
@@ -457,10 +452,10 @@
               35,000+ already joined
             </p>
           </div>
-          <h3 class="pt-2 pb-4 font-bold text-2xl px-6">
+          <h3 class="pt-2 pb-4 font-bold text-2xl">
             Stay up-to-date with what we’re doing
           </h3>
-          <div class="contact-form flex flex-col gap-4 px-6">
+          <div class="contact-form flex flex-col gap-4">
             <!-- FIXME: PLACEHOLDER CUSTOM COLOR NOT WORKING -->
             <input
               type="text"
@@ -469,7 +464,7 @@
             />
 
             <button
-              class="contact-btn bg-bg-soft-red border-2 border-transparent hover:font-bold hover:bg-light-grayish-blue hover:text-bg-soft-red hover:border-bg-soft-red focus:bg-light-grayish-blue focus:text-bg-soft-red focus:border-bg-soft-red focus:font-bold py-2 rounded-md transition ease-in-out delay-50"
+              class="contact-btn bg-bg-soft-red border-2 border-transparent hover:font-bold hover:bg-light-grayish-blue hover:text-bg-soft-red hover:border-bg-soft-red focus:bg-light-grayish-blue focus:text-bg-soft-red focus:border-bg-soft-red focus:font-bold py-2 rounded-md"
             >
               contact us
             </button>
@@ -485,13 +480,13 @@
           </div>
           <div class="footer-nav text-light-grayish-blue py-6">
             <ul class="flex flex-col gap-6">
-              <li><a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">FEATURES</a></li>
-              <li><a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">PRICING</a></li>
-              <li><a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">CONTACT</a></li>
+              <li><a href="#" class="hover:text-bg-soft-red">FEATURES</a></li>
+              <li><a href="#" class="hover:text-bg-soft-red">PRICING</a></li>
+              <li><a href="#" class="hover:text-bg-soft-red">CONTACT</a></li>
             </ul>
           </div>
           <div class="social-links flex gap-4">
-            <a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">
+            <a href="#" class="hover:text-bg-soft-red">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
                   class="hover:fill-bg-soft-red"
@@ -501,7 +496,7 @@
                 />
               </svg>
             </a>
-            <a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">
+            <a href="#" class="hover:text-bg-soft-red">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
                 <path
                   class="hover:fill-bg-soft-red"

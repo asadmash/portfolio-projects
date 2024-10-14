@@ -1,9 +1,0 @@
-@use '../util/__util' as *;
-header {
-    @include bgimageJpg(image-hero-mobile);
-    width: 100%;
-    height: 40vh;
-    padding: 30px 20px;
-    position: relative;
-    
-}
