@@ -28,71 +28,74 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
   </head>
-  <header class="my-4 mx-4 flex">
-    <!-- logo and buttons -->
-    <div id="int-header" class="flex justify-between w-full items-center">
-      <!-- Bookmark logo -->
-      <div id="logo">
-        <img src="./images/logo-bookmark.svg" alt="bookmark-logo" />
-      </div>
-      <div id="mobile-navigation-toggle">
-        <div class="mobile-nav-logo-open">
-          <img src="./images/icon-hamburger.svg" alt="hamburger" />
+  <body class="box-border m-0 text-center mx-auto overflow-x-hidden">
+    <header class="my-4 mx-4 flex overflow-x-none">
+      <!-- logo and buttons -->
+      <div id="int-header" class="flex justify-between w-full items-center">
+        <!-- Bookmark logo -->
+        <div id="logo">
+          <img src="./images/logo-bookmark.svg" alt="bookmark-logo" />
         </div>
-        <div class="mobile-nav-logo-close">
-          <img src="./images/icon-close.svg" alt="close-btn" class="hidden" />
+        <div id="mobile-navigation-toggle">
+          <div class="mobile-nav-logo-open">
+            <img src="./images/icon-hamburger.svg" alt="hamburger" />
+          </div>
+          <div class="mobile-nav-logo-close">
+            <img src="./images/icon-close.svg" alt="close-btn" class="hidden" />
+          </div>
         </div>
       </div>
-    </div>
-    <!-- navigation bar -->
-    <nav>
-      <div id="mobile-navigation" class="hidden">
-        <ul>
-          <li>
-            <a href="#">Features</a>
-          </li>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">Login</a>
-          </li>
-        </ul>
-      </div>
-
-      <div id="desktop-navigation" class="hidden">
-        <ul>
-          <li>
-            <a href="#">Features</a>
-          </li>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <body class="box-border m-0 text-center">
-    <section id="main">
+      <!-- navigation bar -->
+      <nav class="absolute w-full h-full overflow-auto -left-2 -right-4 -top-2">
+        <div id="mobile-navigation" class="flex justify-center items-center p-2">
+          <ul class="mt-16">
+            <li>
+              <a href="#">Features</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div id="desktop-navigation" class="hidden">
+          <ul>
+            <li>
+              <a href="#">Features</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section id="main" class=" overflow-x-hidden">
       <!-- ************************************ INTRO SECTION *************************************** -->
-      <section id="intro-section" class="my-10">
+      <section id="intro-section" class="my-10 overflow-x-hidden">
         <div class="container px-2">
+          <!-- this background desing causing entire page horizontal scroll issue because it had -right-4px value -->
             <div
               id="intro-background-design"
-              class="h-[25%] w-[90%] bg-soft-blue absolute -right-4 top-36 -z-10 rounded-bl-[100px]"
-            ></div>
-          <div id="intro-image">
-            <img src="./images/illustration-hero.svg" alt="hero-image" class="ml-4"/>
+              class="relative h-full w-full bg-soft-blue right-0  -z-10 rounded-bl-[100px]"
+            >
+            <div id="intro-image" class=" ">
+              <img src="./images/illustration-hero.svg" alt="hero-image" class="ml-4"/>
+            </div>
           </div>
+          
           <div id="intro-text" class="mt-24">
             <h1 class="text-3xl font-bold text-center text-dark-blue">
               A Simple Bookmark Manager
