@@ -619,6 +619,10 @@ video {
   top: -0.5rem;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -681,6 +685,10 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
 }
 
 .ml-4 {
@@ -762,10 +770,6 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.snap-none {
-  scroll-snap-type: none;
 }
 
 .flex-col {

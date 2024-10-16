@@ -1,7 +1,12 @@
 let acc = document.getElementsByClassName('accordion');
-let i;
+// header logo container
+let headerLogoContainer = document.getElementById('int-header');
 
-for(i = 0; i < acc.length; i++) {
+
+
+
+// FAQ sections questions arrow open close animation logic
+for(let i = 0; i < acc.length; i++) {
     acc[i].addEventListener('click', function() {
         this.classList.toggle('active');
         var panel = this.nextElementSibling;
