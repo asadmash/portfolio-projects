@@ -1,7 +1,36 @@
 let acc = document.getElementsByClassName('accordion');
 // header logo container
 let headerLogoContainer = document.getElementById('int-header');
+// Mobile navigation opener
+let mobileNavOpenBtn = document.querySelector('.mobile-nav-logo-open')
+console.log("🚀 ~ mobileNavOpenBtn:", mobileNavOpenBtn)
+let mobileNavCloseBtn = document.querySelector('.mobile-nav-close-btn')
+// mobile navigation menu
+let mobileNavMenu = document.querySelector('.navigation');
+console.log("🚀 ~ mobileNavMenu:", mobileNavMenu)
 
+
+
+// mobile nav menu open
+mobileNavOpenBtn.addEventListener('click', () => {
+    console.log('clicked');
+mobileNavMenu.classList.remove('hidden');
+// hide the header
+headerLogoContainer.classList.add('hidden');
+});
+// mobile nav menu close
+mobileNavCloseBtn.addEventListener('click', () => {
+    mobileNavMenu.classList.add('hidden');
+    // show the header
+    headerLogoContainer.classList.remove('hidden');
+})
+
+
+// function mobileNavMenuOpen() {
+// mobileNavMenu.classList.remove('hidden');
+// console.log('clicked');
+
+// }
 
 
 
@@ -29,3 +58,5 @@ for(let i = 0; i < acc.length; i++) {
         }
     });
 }
+
+// add the functionality to toggle the mobile nav
