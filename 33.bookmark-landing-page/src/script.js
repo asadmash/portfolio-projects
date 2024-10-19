@@ -14,28 +14,29 @@ let mainContainer = document.querySelector('#main');
 
 
 // mobile nav menu open
-mobileNavOpenBtn.addEventListener('click', () => {
-    console.log('clicked');
-mobileNavMenu.classList.remove('hidden');
-// hide the header
-headerLogoContainer.classList.add('hidden');
-mainContainer.classList.add('fixed');
-});
+mobileNavOpenBtn.addEventListener('click', mbNavOpen);
+
 // mobile nav menu close
-mobileNavCloseBtn.addEventListener('click', () => {
-    mobileNavMenu.classList.add('hidden');
-    // show the header
-    headerLogoContainer.classList.remove('hidden');
-    mainContainer.classList.remove('fixed');
-})
+mobileNavCloseBtn.addEventListener('click', mbNavClose);
 
+function mbNavOpen() {
+    mobileNavMenu.classList.remove('hidden');
+    // hide the header
+    headerLogoContainer.classList.add('hidden');
+    // disable vertical scrolling of body elements
+    mainContainer.classList.add('fixed');
+    
+}
 
-// function mobileNavMenuOpen() {
-// mobileNavMenu.classList.remove('hidden');
-// console.log('clicked');
+function mbNavClose() {
 
-// }
+        mobileNavMenu.classList.add('hidden');
+        // show the header
+        headerLogoContainer.classList.remove('hidden');
+        // enable vertical scrolling
+        mainContainer.classList.remove('fixed');
 
+}
 
 
 // FAQ sections questions arrow open close animation logic
