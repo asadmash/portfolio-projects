@@ -7,7 +7,9 @@ console.log("🚀 ~ mobileNavOpenBtn:", mobileNavOpenBtn)
 let mobileNavCloseBtn = document.querySelector('.mobile-nav-close-btn')
 // mobile navigation menu
 let mobileNavMenu = document.querySelector('.navigation');
-console.log("🚀 ~ mobileNavMenu:", mobileNavMenu)
+console.log("🚀 ~ mobileNavMenu:", mobileNavMenu);
+// main container
+let mainContainer = document.querySelector('#main');
 
 
 
@@ -17,12 +19,14 @@ mobileNavOpenBtn.addEventListener('click', () => {
 mobileNavMenu.classList.remove('hidden');
 // hide the header
 headerLogoContainer.classList.add('hidden');
+mainContainer.classList.add('fixed');
 });
 // mobile nav menu close
 mobileNavCloseBtn.addEventListener('click', () => {
     mobileNavMenu.classList.add('hidden');
     // show the header
     headerLogoContainer.classList.remove('hidden');
+    mainContainer.classList.remove('fixed');
 })
 
 
