@@ -8,7 +8,7 @@ let mobileNavOpenBtn = document.querySelector(".mobile-nav-logo-open");
 // MOBILE MENU CLOSE BUTTON
 let mobileNavCloseBtn = document.querySelector(".mobile-nav-close-btn");
 // mobile navigation menu
-let mobileNavMenu = document.querySelector(".navigation");
+let mobileNavMenu = document.querySelector("#mb-nav-wrapper");
 console.log("🚀 ~ mobileNavMenu:", mobileNavMenu);
 // main container
 let mainContainer = document.querySelector("#main");
@@ -89,5 +89,16 @@ for (let i = 0; i < acc.length; i++) {
       path.style.stroke = "#fa5757";
     }
   });
+}
+
+for(let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener('click', function(){
+    this.classList.toggle('active');
+    var panel = this.nextElementSibling;
+    var arrow = this.children[0];
+    var svg = arrow.children[0];
+    var path = svg.children[0];
+    console.log(path);
+  })
 }
 // <<<<<<<<<<<<<<<<<<< FAQ SECTIONS FUNC <<<<<<<<<<<<<<<

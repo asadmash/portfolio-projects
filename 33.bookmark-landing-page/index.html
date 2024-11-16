@@ -21,23 +21,22 @@
     <script src="src/script.js" defer></script>
 
     <title>Bookmark landing page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
   </head>
-  <body class="box-border m-0 text-center mx-auto overflow-x-hidden ">
+  <body class="box-border m-0 text-center mx-auto overflow-x-hidden">
+    <!-- ******************* HEADER ************************* -->
     <header class="my-4 mx-4 flex overflow-x-none">
       <!-- logo and buttons -->
-      <div id="int-header" class="flex justify-between w-full items-center "> <!--here add a hidden class when expended menu visible--->
+      <div id="int-header" class="flex justify-between w-full items-center">
+        <!--here add a hidden class when expended menu visible--->
         <!-- Bookmark logo -->
         <div id="logo">
           <img src="./images/logo-bookmark.svg" alt="bookmark-logo" />
         </div>
-        <div id="mobile-navigation-toggle">
-          <div class="mobile-nav-logo-open">
+        <div
+          id="mobile-navigation-toggle"
+          class="lg:hidden md:hidden sm:hidden"
+        >
+          <div class="mobile-nav-logo-open lg:hidden md:hidden sm:hidden">
             <img src="./images/icon-hamburger.svg" alt="hamburger" />
           </div>
           <!-- <div class="mobile-nav-logo-close">
@@ -46,91 +45,130 @@
         </div>
       </div>
       <!-- navigation menu -->
-      <nav class="navigation fixed w-full h-full overflow-auto -left-2 -right-4 -top-2  hidden z-10">
+      <nav class="navigation w-auto h-auto">
         <!-- FIXME: fix the vertical scroll issue while mobile nav expended -->
-         <!-- mobile navigation menu -->
-        <div id="mobile-navigation" class="flex flex-col px-4 pt-10 bg-dark-blue/90 h-full relative overflow-hidden">
-          <!-- mobile navigation logo and button -->
-          <div class="mn-header flex justify-between">
-            <div class="logo">
-              <img src="/images/logo-bookmark-nav.svg" alt="" />
+        <!-- mobile navigation menu -->
+        <div
+          id="mb-nav-wrapper"
+          class="fixed w-screen h-screen hidden overflow-auto -left-2 -right-4 -top-2 z-10"
+         >
+          <div
+            id="mobile-navigation"
+            class="flex flex-col px-4 pt-10 bg-dark-blue/90 h-full relative overflow-hidden md:hidden lg:hidden"
+            >
+            <!-- mobile navigation logo and button -->
+            <div class="mn-header flex justify-between">
+              <div class="logo">
+                <img src="/images/logo-bookmark-nav.svg" alt="" />
+              </div>
+              <button class="mobile-nav-close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15">
+                  <path
+                    class="hover:fill-bg-soft-red transition ease-in-out delay-50 hover: hover:duration-300 ... focus:fill-bg-soft-red"
+                    fill="#FFF"
+                    fill-rule="evenodd"
+                    d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"
+                  />
+                </svg>
+              </button>
             </div>
-            <button class="mobile-nav-close-btn ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path class="hover:fill-bg-soft-red transition ease-in-out delay-50 hover: hover:duration-300 ... focus:fill-bg-soft-red" fill="#FFF" fill-rule="evenodd" d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>
-            </button>
-          </div>
-          <!-- mobile navigation lists -->
-          <ul class="mt-16 mb-32 text-white uppercase w-full px-4">
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#" class=" cursor-pointer inline-block hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:duration-300 ...">Features</a>
-            </li>
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#" class="inline-block hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ...">Pricing</a>
-            </li>
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#" class="inline-block hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ...">Contact</a>
-            </li>
-            <li class="py-4 border-t-2 border-grayish-blue w-100%">
-              <a href="#" class="mt-2 inline-block w-full py-2 border-2 border-light-grayish-blue hover:text-bg-soft-red hover:border-bg-soft-red focus:border-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ...">Login</a>
-            </li>
-          </ul>
-          <!-- mobile navigation social icon -->
-          <div class="social-links flex justify-center gap-4 absolute bottom-10 w-full">
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                class="hover:fill-bg-soft-red transition ease-in-out delay-150 hover:scale-110 hover: hover:duration-300 ... focus:fill-bg-soft-red"
-                  fill="#FFF"
-                  fill-rule="evenodd"
-                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
-                />
-              </svg>
-            </a>
-            <a href="#" >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
-                <path
-                class="hover:fill-bg-soft-red transition ease-in-out delay-150 hover:scale-110 hover: hover:duration-300 ... focus:fill-bg-soft-red"
-                  fill="#FFF"
-                  fill-rule="evenodd"
-                  d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
-                />
-              </svg>
-            </a>
+            <!-- mobile navigation lists -->
+            <ul class="mt-16 mb-32 text-white uppercase w-full px-4">
+              <li class="py-4 border-t-2 border-grayish-blue w-100%">
+                <a
+                  href="#"
+                  class="cursor-pointer inline-block hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ..."
+                  >Features</a
+                >
+              </li>
+              <li class="py-4 border-t-2 border-grayish-blue w-100%">
+                <a
+                  href="#"
+                  class="inline-block hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ..."
+                  >Pricing</a
+                >
+              </li>
+              <li class="py-4 border-t-2 border-grayish-blue w-100%">
+                <a
+                  href="#"
+                  class="inline-block hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ..."
+                  >Contact</a
+                >
+              </li>
+              <li class="py-4 border-t-2 border-grayish-blue w-100%">
+                <a
+                  href="#"
+                  class="mt-2 inline-block w-full py-2 border-2 border-light-grayish-blue hover:text-bg-soft-red hover:border-bg-soft-red focus:border-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 ..."
+                  >Login</a
+                >
+              </li>
+            </ul>
+            <!-- mobile navigation social icon -->
+            <div
+              class="social-links flex justify-center gap-4 absolute bottom-10 w-full"
+            >
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    class="hover:fill-bg-soft-red transition ease-in-out delay-150 hover:scale-110 hover: hover:duration-300 ... focus:fill-bg-soft-red"
+                    fill="#FFF"
+                    fill-rule="evenodd"
+                    d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                  <path
+                    class="hover:fill-bg-soft-red transition ease-in-out delay-150 hover:scale-110 hover: hover:duration-300 ... focus:fill-bg-soft-red"
+                    fill="#FFF"
+                    fill-rule="evenodd"
+                    d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-  <!-- Desktop navigation -->
-        <div id="desktop-navigation" class="hidden">
-          <ul>
+
+        <!-- Desktop navigation -->
+        <div id="desktop-navigation" class="lg:block md:block sm:block hidden">
+          <ul class="flex space-x-10 font-bold uppercase ">
             <li>
-              <a href="#">Features</a>
+              <a href="#" class="hover:text-bg-soft-red">Features</a>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <a href="#" class="hover:text-bg-soft-red">Pricing</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#" class="hover:text-bg-soft-red">Contact</a>
             </li>
             <li>
-              <a href="#">Login</a>
+              <a href="#" class="px-5 py-2 border-2 rounded-md border-transparent text-light-grayish-blue bg-bg-soft-red hover:text-bg-soft-red hover:border-bg-soft-red hover:bg-light-grayish-blue">Login</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-    <section id="main" class=" overflow-x-hidden">
+    <!-- ******************* HEADER ************************* -->
+    <section id="main" class="overflow-x-hidden">
       <!-- ************************************ INTRO SECTION *************************************** -->
       <section id="intro-section" class="my-10 overflow-x-hidden">
         <div class="container px-2">
           <!-- this background desing causing entire page horizontal scroll issue because it had -right-4px value -->
-            <div
-              id="intro-background-design"
-              class="relative h-full w-full bg-soft-blue right-0  -z-10 rounded-bl-[100px]"
-            >
-            <div id="intro-image" class=" ">
-              <img src="./images/illustration-hero.svg" alt="hero-image" class="ml-4"/>
+          <div id="intro-background-design" class="relative h-full w-full">
+            <div id="intro-image" class="">
+              <img
+                src="./images/illustration-hero.svg"
+                alt="hero-image"
+                class="ml-4"
+              />
             </div>
+            <div
+              class="background w-full h-3/4 bg-soft-blue absolute top-20 left-20 z-[-1] rounded-bl-[100px]"
+            ></div>
           </div>
-          
+
           <div id="intro-text" class="mt-24">
             <h1 class="text-3xl font-bold text-center text-dark-blue">
               A Simple Bookmark Manager
@@ -163,7 +201,7 @@
       <section id="features-section" class="my-20">
         <div id="features-container" class="px-2">
           <h2 class="text-2xl font-bold">Features</h2>
-          <p class="text-grayish-blue mt-2  px-6">
+          <p class="text-grayish-blue mt-2 px-6">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
@@ -211,18 +249,19 @@
             </div>
           </div>
           <div id="features-slides" class="relative">
-            <div
-              id="feature-background-design"
-              class="h-[40%] w-[90%] bg-soft-blue absolute -left-4 top-20 -z-10 rounded-br-[100px]"
-            ></div>
+            <div id="feature-background-design" class=""></div>
             <div class="slide simple-bookmarking Z-10">
-              <div class="slide-container h-[40%] w-[100%] px-2">
+              <div class="relative slide-container h-[40%] w-[100%] px-2">
                 <img
                   src="./images/illustration-features-tab-1.svg"
                   alt="simple-bookmarking"
                   class="w-[100%] h-[100%]"
                 />
+                <div
+                  class="background w-full h-full bg-soft-blue absolute top-20 right-20 z-[-1] rounded-br-[100px]"
+                ></div>
               </div>
+
               <div class="slide-text">
                 <h3 class="text-2xl font-bold mt-28 mb-2">
                   Bookmark in one click
@@ -290,7 +329,9 @@
             class="flex justify-center items-center self-center flex-col"
           >
             <!-- EXTENSION-CARD -->
-            <div class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6">
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6"
+            >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-chrome.svg" alt="chorme" />
               </div>
@@ -318,7 +359,9 @@
               </button>
             </div>
             <!-- EXTENSION-CARD -->
-            <div class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6">
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6"
+            >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-firefox.svg" alt="firefox" />
               </div>
@@ -346,7 +389,9 @@
               </button>
             </div>
             <!-- EXTENSION-CARD -->
-            <div class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6">
+            <div
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6"
+            >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-opera.svg" alt="opera" />
               </div>
@@ -475,7 +520,7 @@
             </div>
           </div>
           <button
-            class="bg-soft-blue text-light-grayish-blue px-4 py-2 rounded hover:bg-dark-blue focus:bg-dark-blue"
+            class="bg-soft-blue text-light-grayish-blue border-y px-4 py-2 rounded hover:bg-dark-blue focus:bg-dark-blue"
           >
             More Info
           </button>
@@ -520,13 +565,34 @@
           </div>
           <div class="footer-nav text-light-grayish-blue py-6">
             <ul class="flex flex-col gap-6">
-              <li><a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">FEATURES</a></li>
-              <li><a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">PRICING</a></li>
-              <li><a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">CONTACT</a></li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-bg-soft-red transition ease-in-out delay-50"
+                  >FEATURES</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-bg-soft-red transition ease-in-out delay-50"
+                  >PRICING</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-bg-soft-red transition ease-in-out delay-50"
+                  >CONTACT</a
+                >
+              </li>
             </ul>
           </div>
           <div class="social-links flex gap-4">
-            <a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">
+            <a
+              href="#"
+              class="hover:text-bg-soft-red transition ease-in-out delay-50"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
                   class="hover:fill-bg-soft-red"
@@ -536,7 +602,10 @@
                 />
               </svg>
             </a>
-            <a href="#" class="hover:text-bg-soft-red transition ease-in-out delay-50">
+            <a
+              href="#"
+              class="hover:text-bg-soft-red transition ease-in-out delay-50"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
                 <path
                   class="hover:fill-bg-soft-red"
