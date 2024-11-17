@@ -51,11 +51,11 @@
         <div
           id="mb-nav-wrapper"
           class="fixed w-screen h-screen hidden overflow-auto -left-2 -right-4 -top-2 z-10"
-         >
+        >
           <div
             id="mobile-navigation"
             class="flex flex-col px-4 pt-10 bg-dark-blue/90 h-full relative overflow-hidden md:hidden lg:hidden"
-            >
+          >
             <!-- mobile navigation logo and button -->
             <div class="mn-header flex justify-between">
               <div class="logo">
@@ -133,18 +133,34 @@
 
         <!-- Desktop navigation -->
         <div id="desktop-navigation" class="lg:block md:block sm:block hidden">
-          <ul class="flex space-x-10 font-bold uppercase ">
+          <ul class="flex space-x-10 font-bold uppercase">
             <li>
-              <a href="#" class="hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-50">Features</a>
+              <a
+                href="#"
+                class="hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-50"
+                >Features</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-50">Pricing</a>
+              <a
+                href="#"
+                class="hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-50"
+                >Pricing</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-50">Contact</a>
+              <a
+                href="#"
+                class="hover:text-bg-soft-red focus:text-bg-soft-red transition ease-in-out delay-50"
+                >Contact</a
+              >
             </li>
             <li>
-              <a href="#" class="px-5 py-2 border-2 rounded-md border-transparent text-light-grayish-blue bg-bg-soft-red hover:text-bg-soft-red hover:border-bg-soft-red hover:bg-light-grayish-blue transition ease-in-out delay-50 focus:text-bg-soft-red focus:border-bg-soft-red focus:bg-light-grayish-blue">Login</a>
+              <a
+                href="#"
+                class="px-5 py-2 border-2 rounded-md border-transparent text-light-grayish-blue bg-bg-soft-red hover:text-bg-soft-red hover:border-bg-soft-red hover:bg-light-grayish-blue transition ease-in-out delay-50 focus:text-bg-soft-red focus:border-bg-soft-red focus:bg-light-grayish-blue"
+                >Login</a
+              >
             </li>
           </ul>
         </div>
@@ -154,14 +170,17 @@
     <section id="main" class="overflow-x-hidden">
       <!-- ************************************ INTRO SECTION *************************************** -->
       <section id="intro-section" class="my-10 overflow-x-hidden">
-        <div class="px-2 flex flex-col md:flex-row-reverse items-center">
+        <div class="px-2 flex flex-col md:flex-row-reverse items-center 2xl:gap-14">
           <!-- this background desing causing entire page horizontal scroll issue because it had -right-4px value -->
-          <div id="intro-background-design" class="relative h-full flex justify-start basis-1/2">
+          <div
+            id="intro-background-design"
+            class="relative h-full flex justify-start basis-1/2"
+          >
             <div id="intro-image" class="">
               <img
                 src="./images/illustration-hero.svg"
                 alt="hero-image"
-                class="ml-4"
+                class="2xl:ml-36"
               />
             </div>
             <div
@@ -169,8 +188,13 @@
             ></div>
           </div>
 
-          <div id="intro-text" class=" max-w-[400px] lg:max-w-[600px] basis-1/2 text-left ml-10 my-24 sm:my-0">
-            <h1 class="text-3xl font-bold text-center sm:text-left text-dark-blue">
+          <div
+            id="intro-text"
+            class="max-w-[400px] lg:max-w-[600px] basis-1/2 text-left ml-10 my-24 sm:my-0"
+          >
+            <h1
+              class="text-3xl font-bold text-center sm:text-left text-dark-blue"
+            >
               A Simple Bookmark Manager
             </h1>
             <p class="text-grayish-blue my-6 px-8 sm:px-0">
@@ -178,7 +202,10 @@
               Open a new browser tab and see your sites load instantly. Try it
               for free.
             </p>
-            <div id="get-btns" class="flex gap-3 justify-center sm:justify-start">
+            <div
+              id="get-btns"
+              class="flex gap-3 justify-center sm:justify-start"
+            >
               <button
                 id="get-chrome-btn"
                 class="text-white font-semibold bg-soft-blue px-2 py-2 rounded-md border-2 border-transparent hover:text-soft-blue focus:text-soft-blue hover:bg-light-grayish-blue focus:bg-light-grayish-blue hover:border-soft-blue focus:border-soft-blue"

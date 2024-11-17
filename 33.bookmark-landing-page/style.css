@@ -1387,3 +1387,27 @@ video {
     max-width: 600px;
   }
 }
+
+@media (min-width: 1280px) {
+  .xl\:gap-24 {
+    gap: 6rem;
+  }
+
+  .xl\:gap-14 {
+    gap: 3.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:ml-32 {
+    margin-left: 8rem;
+  }
+
+  .\32xl\:ml-36 {
+    margin-left: 9rem;
+  }
+
+  .\32xl\:gap-14 {
+    gap: 3.5rem;
+  }
+}
