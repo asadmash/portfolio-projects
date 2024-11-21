@@ -170,7 +170,9 @@
     <section id="main" class="overflow-x-hidden">
       <!-- ************************************ INTRO SECTION *************************************** -->
       <section id="intro-section" class="my-10 overflow-x-hidden">
-        <div class="px-2 flex flex-col md:flex-row-reverse items-center 2xl:gap-14">
+        <div
+          class="px-2 flex flex-col md:flex-row-reverse items-center 2xl:gap-14"
+        >
           <!-- this background desing causing entire page horizontal scroll issue because it had -right-4px value -->
           <div
             id="intro-background-design"
@@ -228,21 +230,21 @@
       <section id="features-section" class="my-20">
         <div id="features-container" class="px-2">
           <h2 class="text-2xl font-bold">Features</h2>
-          <p class="text-grayish-blue mt-2 px-6">
+          <p class="text-grayish-blue mt-2 px-6 max-w-[500px] mx-auto">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
           </p>
-          <div id="features-navigation">
+          <div id="features-navigation" class="md:flex justify-center md:my-10">
             <div id="features-sliders" class="my-10">
-              <ul>
-                <li class="border-solid border-y-2 text-center">
+              <ul class="md:flex">
+                <li class="border-solid border-y-2 text-center md:border-t-0">
                   <p
                     class="inline-block text-center relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-bg-soft-red after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
                   >
                     <a
                       href="#"
-                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red"
+                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red md:pl-6 md:pr-6"
                     >
                       Simple Bookmarking
                     </a>
@@ -254,7 +256,7 @@
                   >
                     <a
                       href="#"
-                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red"
+                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red md:pl-6 md:pr-6"
                     >
                       Speedy Searching
                     </a>
@@ -266,7 +268,7 @@
                   >
                     <a
                       href="#"
-                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red"
+                      class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red md:pl-6 md:pr-6"
                     >
                       Easy Sharing
                     </a>
@@ -277,28 +279,36 @@
           </div>
           <div id="features-slides" class="relative">
             <div id="feature-background-design" class=""></div>
-            <div class="slide simple-bookmarking Z-10">
-              <div class="relative slide-container h-[40%] w-[100%] px-2">
-                <img
-                  src="./images/illustration-features-tab-1.svg"
-                  alt="simple-bookmarking"
-                  class="w-[100%] h-[100%]"
-                />
+            <div
+              class="slide simple-bookmarking Z-10 md:flex md:space-x-24 justify-center items-center"
+            >
+              <div
+                class="relative slide-container h-[40%] w-[100%] px-2 basis-1/2"
+              >
+                <div class="feature-image md:ml-3 xl:ml-28 2xl:ml-52">
+                  <img
+                    src="./images/illustration-features-tab-1.svg"
+                    alt="simple-bookmarking"
+                    class=""
+                  />
+                </div>
                 <div
-                  class="background w-full h-full bg-soft-blue absolute top-20 right-20 z-[-1] rounded-br-[100px]"
+                  class="background w-full h-full bg-soft-blue absolute top-12 max-w-[500px] md:max-w-full right-30 left-[-30px] md:left-[-50px] lg:left-[-150px] xl:left-[-250px] 2xl:w-[90%] z-[-1] rounded-br-[100px]"
                 ></div>
               </div>
 
-              <div class="slide-text">
-                <h3 class="text-2xl font-bold mt-28 mb-2">
+              <div class="slide-text basis-1/3 md:text-left">
+                <h3 class="text-2xl font-bold mt-28 mb-2 md:mt-0">
                   Bookmark in one click
                 </h3>
-                <p class="text-grayish-blue px-6">
+                <p
+                  class="text-grayish-blue px-6 md:px-0 md:max-w-[500px] text-[clamp(1rem,0.95rem+0.25vw,1.25rem)]"
+                >
                   Organize your bookmarks however you like. Our simple
                   drag-and-drop interface gives you complete control over how
                   you manage your favourite sites.
                 </p>
-                <!-- <button>More</button> -->
+                <button>More Info</button>
               </div>
             </div>
             <div class="slide hidden">
@@ -341,11 +351,14 @@
       <!-- ******************* FEATURES SECTION ******************************** -->
 
       <!-- ******************* EXTENSION SECTION ******************************** -->
-      <section id="extension-section" class="text-center">
-        <div class="container px-2">
-          <div id="extension-download-description">
+      <section
+        id="extension-section"
+        class="text-center flex flex-col justify-center mt-[10rem]"
+      >
+        <div class="container mx-auto">
+          <div id="extension-download-description" class="container">
             <h2 class="font-bold text-2xl mb-2">Download the extension</h2>
-            <p class="text-grayish-blue my-2 px-6">
+            <p class="text-grayish-blue my-2 px-6  text-[clamp(1rem,0.95rem+0.25vw,1.25rem)] max-w-[560px] mx-auto">
               We’ve got more browsers in the pipeline. Please do let us know if
               you’ve got a favourite you’d like us to prioritize.
             </p>
@@ -353,7 +366,7 @@
           <!-- EXTENSION-CARD-CONTAINER -->
           <div
             id="install-extension"
-            class="flex justify-center items-center self-center flex-col"
+            class="flex justify-center items-center self-center flex-col md:flex-row md:space-x-4 xl:space-x-8 md:items-start"
           >
             <!-- EXTENSION-CARD -->
             <div
@@ -380,14 +393,14 @@
                 </svg>
               </div>
               <button
-                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white"
+                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white hover:bg-white hover:text-soft-blue border-2 border-soft-blue focus:bg-white focus:text-soft-blue transition ease-in-out delay-50"
               >
                 Add & Install Extension
               </button>
             </div>
             <!-- EXTENSION-CARD -->
             <div
-              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6"
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6 md:mt-32"
             >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-firefox.svg" alt="firefox" />
@@ -410,14 +423,14 @@
                 </svg>
               </div>
               <button
-                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white"
+                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white hover:bg-white hover:text-soft-blue border-2 border-soft-blue focus:bg-white focus:text-soft-blue transition ease-in-out delay-50"
               >
                 Add & Install Extension
               </button>
             </div>
             <!-- EXTENSION-CARD -->
             <div
-              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6"
+              class="extension-card shadow-lg pt-20 pb-7 rounded-xl w-72 my-6  md:mt-48"
             >
               <div class="extension-logo flex justify-center">
                 <img src="./images/logo-opera.svg" alt="opera" />
@@ -442,7 +455,7 @@
                 </svg>
               </div>
               <button
-                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white"
+                class="add-button py-2 px-6 rounded bg-soft-blue inline-block text-white hover:bg-white hover:text-soft-blue border-2 border-soft-blue focus:bg-white focus:text-soft-blue transition ease-in-out delay-50"
               >
                 Add & Install Extension
               </button>
@@ -454,7 +467,7 @@
 
       <!-- ******************* FAQ SECTION ******************************** -->
       <section id="faq-section" class="my-32">
-        <div class="container px-4">
+        <div class="container px-4 mx-auto max-w-[550px]">
           <h2 class="font-bold text-2xl">Frequently Asked Questions</h2>
           <p class="text-grayish-blue mt-4 px-6">
             Here are some of our FAQs. If you have any other questions you’d
@@ -558,7 +571,7 @@
 
       <!-- ******************* NEWSLETTER SECTION*******************  -->
       <section id="newsletter" class="bg-soft-blue text-white text-center">
-        <div class="container pt-16 pb-8 px-4">
+        <div class="container pt-16 pb-8 px-4 mx-auto">
           <div class="joined">
             <p class="uppercase tracking-[.2em] text-sm">
               35,000+ already joined
@@ -586,7 +599,7 @@
       <!-- ******************* NEWSLETTER SECTION *******************  -->
       <!-- ******************* FOOTER SECTION *******************  -->
       <footer id="footer-section" class="bg-dark-blue">
-        <div class="container flex flex-col justify-center items-center py-8">
+        <div class="container flex flex-col justify-center items-center py-8 mx-auto">
           <div class="logo">
             <img src="/images/logo-bookmark-footer.svg" alt="" />
           </div>
