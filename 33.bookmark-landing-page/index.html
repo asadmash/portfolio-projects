@@ -571,7 +571,7 @@
 
       <!-- ******************* NEWSLETTER SECTION*******************  -->
       <section id="newsletter" class="bg-soft-blue text-white text-center">
-        <div class="container pt-16 pb-8 px-4 mx-auto">
+        <div class="container pt-16 pb-8 px-4 mx-auto max-w-[500px]">
           <div class="joined">
             <p class="uppercase tracking-[.2em] text-sm">
               35,000+ already joined
@@ -580,16 +580,16 @@
           <h3 class="pt-2 pb-4 font-bold text-2xl px-6">
             Stay up-to-date with what we’re doing
           </h3>
-          <div class="contact-form flex flex-col gap-4 px-6">
+          <div class="contact-form flex flex-col gap-4 px-6 md:flex-row">
             <!-- FIXME: PLACEHOLDER CUSTOM COLOR NOT WORKING -->
             <input
               type="text"
-              class="placeholder:text-text-grayish-blue text-dark-blue rounded-md py-2 px-2"
+              class="placeholder:text-text-grayish-blue text-dark-blue rounded-md py-2 px-2 basis-3/4"
               placeholder="Enter your email address"
             />
 
             <button
-              class="contact-btn bg-bg-soft-red border-2 border-transparent hover:font-bold hover:bg-light-grayish-blue hover:text-bg-soft-red hover:border-bg-soft-red focus:bg-light-grayish-blue focus:text-bg-soft-red focus:border-bg-soft-red focus:font-bold py-2 rounded-md transition ease-in-out delay-50"
+              class="contact-btn bg-bg-soft-red border-2 border-transparent hover:font-bold hover:bg-light-grayish-blue hover:text-bg-soft-red hover:border-bg-soft-red focus:bg-light-grayish-blue focus:text-bg-soft-red focus:border-bg-soft-red focus:font-bold py-2 rounded-md transition ease-in-out delay-50 basis-1/4"
             >
               contact us
             </button>
@@ -599,12 +599,12 @@
       <!-- ******************* NEWSLETTER SECTION *******************  -->
       <!-- ******************* FOOTER SECTION *******************  -->
       <footer id="footer-section" class="bg-dark-blue">
-        <div class="container flex flex-col justify-center items-center py-8 mx-auto">
-          <div class="logo">
+        <div class="container flex flex-col justify-center items-center py-8 mx-auto md:flex-row md:justify-between">
+          <div class="logo md:basis-1/4">
             <img src="/images/logo-bookmark-footer.svg" alt="" />
           </div>
           <div class="footer-nav text-light-grayish-blue py-6">
-            <ul class="flex flex-col gap-6">
+            <ul class="flex flex-col gap-6 md:flex-row md:self-start">
               <li>
                 <a
                   href="#"
@@ -628,7 +628,7 @@
               </li>
             </ul>
           </div>
-          <div class="social-links flex gap-4">
+          <div class="social-links flex gap-4 md:basis-1/2 md:justify-end">
             <a
               href="#"
               class="hover:text-bg-soft-red transition ease-in-out delay-50"
