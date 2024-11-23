@@ -35,3 +35,11 @@
     color: hsl(229, 31%, 21%);
 
 }
+.error input {
+    
+    border: 3px solid #fa5757;
+}
+
+.success input {
+    border: 3px solid #11bb4a;
+}

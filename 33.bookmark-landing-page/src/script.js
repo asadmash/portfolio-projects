@@ -1,3 +1,4 @@
+
 // ************ DOM ELEMENETS ****************
 
 let acc = document.getElementsByClassName("accordion");
