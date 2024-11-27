@@ -201,7 +201,7 @@
             >
               A Simple Bookmark Manager
             </h1>
-            <p class="text-grayish-blue my-6 px-8 sm:px-0">
+            <p class="text-grayish-blue my-6 px-8 text-[clamp(1rem,0.95rem+0.25vw,1.25rem)] sm:px-0">
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly. Try it
               for free.
@@ -232,7 +232,7 @@
       <section id="features-section" class="my-20">
         <div id="features-container" class="px-2">
           <h2 class="text-2xl font-bold">Features</h2>
-          <p class="text-grayish-blue mt-2 px-6 max-w-[500px] mx-auto">
+          <p class="text-grayish-blue mt-2 px-6 text-[clamp(1rem,0.95rem+0.25vw,1.25rem)] max-w-[500px] mx-auto">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
@@ -245,8 +245,10 @@
                     class="inline-block text-center relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-bg-soft-red after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
                   >
                     <a
-                      href="#"
+                      href="#slide1" id="slide1"
                       class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red md:pl-6 md:pr-6"
+                      onmouseover="pause()"
+                      onclick="slide1()"
                     >
                       Simple Bookmarking
                     </a>
@@ -257,8 +259,10 @@
                     class="inline-block text-center relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-bg-soft-red after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
                   >
                     <a
-                      href="#"
+                      href="#slide2" id="slide2"
                       class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red md:pl-6 md:pr-6"
+                      onmouseover="pause()"
+                      onclick="slide2()"
                     >
                       Speedy Searching
                     </a>
@@ -269,8 +273,10 @@
                     class="inline-block text-center relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-bg-soft-red after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
                   >
                     <a
-                      href="#"
+                    href="#slide3" id="slide3"
                       class="py-3 inline-block text-lg hover:font-bold focus:font-bold focus:text-bg-soft-red md:pl-6 md:pr-6"
+                      onmouseover="pause()"
+                      onclick="slide3()"
                     >
                       Easy Sharing
                     </a>
@@ -289,7 +295,7 @@
               >
                 <div class="feature-image md:ml-3 xl:ml-28 2xl:ml-52">
                   <img name="slide"
-                    
+                    onmouseover="pause()" onmouseout="paused = false;"
                     alt="simple-bookmarking"
                     class=""
                   />
@@ -299,7 +305,7 @@
                 ></div>
               </div>
 
-              <div class="slide-text basis-1/3 md:text-left">
+              <div class="slide-text basis-1/3 md:text-left"  onmouseover="pause()" onmouseout="paused = false;">
                 <h3 class="slide-heading text-2xl font-bold mt-28 mb-2 md:mt-0">
                  
                 </h3>
@@ -438,7 +444,7 @@
       <section id="faq-section" class="my-32">
         <div class="container px-4 mx-auto max-w-[550px]">
           <h2 class="font-bold text-2xl">Frequently Asked Questions</h2>
-          <p class="text-grayish-blue mt-4 px-6">
+          <p class="text-grayish-blue mt-4 px-6 text-[clamp(1rem,0.95rem+0.25vw,1.25rem)]">
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
           </p>
@@ -458,7 +464,7 @@
                 </svg>
               </div>
             </button>
-            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden text-[clamp(1rem,0.95rem+0.25vw,1.25rem)]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
               quis quam ornare mattis.
@@ -478,7 +484,7 @@
                 </svg>
               </div>
             </button>
-            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden text-[clamp(1rem,0.95rem+0.25vw,1.25rem)]">
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
               massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
               eros aliquet convallis ultricies. Mauris augue massa, ultricies
@@ -501,7 +507,7 @@
                 </svg>
               </div>
             </button>
-            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden text-[clamp(1rem,0.95rem+0.25vw,1.25rem)]">
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
               vestibulum dolor, ut condimentum urna vulputate eget. Cras in
               ligula quis est pharetra mattis sit amet pharetra purus. Sed
@@ -522,7 +528,7 @@
                 </svg>
               </div>
             </button>
-            <div class="panel text-grayish-blue py-6 overflow-hidden hidden">
+            <div class="panel text-grayish-blue py-6 overflow-hidden hidden text-[clamp(1rem,0.95rem+0.25vw,1.25rem)]">
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
               placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
               pellentesque non ut velit.

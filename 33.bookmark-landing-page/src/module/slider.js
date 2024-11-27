@@ -21,9 +21,9 @@ let slideH = [
   "Share your bookmarks",
 ];
 let slideP = [
-  "Easily share your bookmarks and collections with others.Create a shareable link that you can send at the click of a button",
+  "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.",
   "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks",
-  "Easy share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
+  "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
 ];
 
 // time to change interval
@@ -55,6 +55,22 @@ function handleChange() {
 // slideshow pause functionality
 function pause() {
   paused = !paused;
+}
+
+// manual control
+function slide1() {
+    i = 0;
+    // pause = true;
+}
+
+function slide2(){
+    i = 1;
+    // pause = true;
+}
+
+function slide3(){
+    i = 2;
+    // pause = true;
 }
 // load the script at website load
 window.onload = handleChange;
