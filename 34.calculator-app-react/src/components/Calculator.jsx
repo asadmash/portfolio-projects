@@ -16,114 +16,104 @@ const Calculator = () => {
 
         {/* keyboard container */}
         <div className="keyboard-container bg-[#252d44] p-4 rounded-2xl mt-4">
-          <div className="m-2 flex justify-between">
+          <div className="mx-2 my-4 flex justify-between">
             <input
               type="button"
               value="7"
-              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
               value="8"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
               value="9"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
               value="DEL"
-              className="bg-[#3b4664] text-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              className="bg-[#657199] text-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
           </div>
-          <div className="m-2 flex justify-between">
+          <div className="mx-2 my-4 flex justify-between">
             <input
               type="button"
-              value="7"
-              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="4"
+              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="8"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="5"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="9"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="6"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="DEL"
-              className="bg-[#3b4664] text-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
-            />
-          </div>
-          <div className="m-2 flex justify-between">
-            <input
-              type="button"
-              value="7"
-              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
-            />
-            <input
-              type="button"
-              value="8"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
-            />
-            <input
-              type="button"
-              value="9"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
-            />
-            <input
-              type="button"
-              value="DEL"
-              className="bg-[#3b4664] text-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="+"
+              className="text-[#3b4664] bg-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
           </div>
-          <div className="m-2 flex justify-between">
+          <div className="mx-2 my-4 flex justify-between">
             <input
               type="button"
-              value="7"
-              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="1"
+              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="8"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="2"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="9"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="3"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="DEL"
-              className="bg-[#3b4664] text-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="-"
+              className="text-[#3b4664] bg-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
           </div>
-          <div className="m-2 flex justify-between">
+          <div className="mx-2 my-4 flex justify-between">
             <input
               type="button"
-              value="7"
-              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="."
+              className="bg-[#eae3db] text-[#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="8"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="0"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="9"
-              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="/"
+              className="bg-[#eae3db] text-[#3b4664] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
             />
             <input
               type="button"
-              value="DEL"
-              className="bg-[#3b4664] text-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md"
+              value="x"
+              className="text-[#3b4664] bg-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-24 h-auto"
+            />
+          </div>
+          <div className="mx-2 my-4 flex justify-between">
+            <input
+              type="button"
+              value="reset"
+              className="bg-[#647299] text-[#eae3db] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-32 h-auto"
+            />
+            <input
+              type="button"
+              value="="
+              className="bg-[#d13f30] text-[#eae3db] [#3b4664] py-2 px-6 rounded-lg font-bold text-2xl shadow-md w-32 h-auto"
             />
           </div>
         </div>
