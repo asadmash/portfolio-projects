@@ -1,9 +1,12 @@
-import React from 'react'
-import Calculator from './components/Calculator'
+import React from 'react';
+// import { ThemeProvider } from './contexts/ThemeContext';
+import Calculator from './components/Calculator';
 
 const App = () => {
   return (
-    <Calculator/>
+    // <ThemeProvider>
+      <Calculator/>
+    // </ThemeProvider>
   )
 }
 
