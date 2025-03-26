@@ -16,29 +16,47 @@ export default {
       `text-${theme}-text-white`,
       `text-${theme}-text-yellow`,
       `text-${theme}-text-darkBlue`,
+      `shadow-${theme}-primary`,
+      `shadow-${theme}-secondary`,
+      `shadow-${theme}-tertiary`,
+      `text-${theme}-keys-secondary-background`
     ]),
   ],
   theme: {
     extend: {
+      boxShadow: {
+        // Theme 1
+        'theme1-primary': "0px 4px 2px 0px rgba(64,78,114,0.75)",
+        'theme1-secondary': "0px 4px 2px 0px rgba(147,38,26,0.75)",
+        'theme1-tertiary': "0px 4px 2px 0px rgba(180,165,151,0.75)",
+        // Theme 2
+        'theme2-primary': "0px 4px 2px 0px rgba(30,97,106,0.75)",
+        'theme2-secondary': "0px 4px 2px 0px rgba(137,57,1,0.75)",
+        'theme2-tertiary': "0px 4px 2px 0px rgba(180,165,151,0.75)",
+        // Theme 3
+        'theme3-primary': "0px 4px 2px 0px rgba(188,21,244,0.75)",
+        'theme3-secondary': "0px 4px 2px 0px rgba(108,249,242,0.75)",
+        'theme3-tertiary': "0px 4px 2px 0px rgba(135,28,156,0.75)",
+      },
       colors: {
         theme1: {
           backgrounds: {
             main: "hsl(222, 26%, 31%)",
-            toggle: "hsl(185, 50%, 60%)",
+            toggle: "hsl(225, 30%, 21%)",
             screen: "hsl(224, 36%, 15%)",
           },
           keys: {
             primary: {
               background: "hsl(225, 21%, 49%)",
-              shadow: "hsl(224, 28%, 35%)",
+              shadow: "0px 10px 2px 0px rgba(64,78,114,0.75)",
             },
             secondary: {
               background: "hsl(6, 63%, 50%)",
-              shadow: "hsl(6, 70%, 34%)",
+              shadow: "0px 10px 2px 0px rgba(147,38,26,0.75)",
             },
             tertiary: {
               background: "hsl(30, 25%, 89%)",
-              shadow: "hsl(28, 16%, 65%)",
+              shadow: "0px 10px 2px 0px rgba(180,165,151,0.75)",
             },
           },
           text: {
@@ -55,16 +73,16 @@ export default {
           },
           keys: {
             primary: {
-              background: "hsl(185, 42%, 37%)",
-              shadow: "hsl(185, 58%, 25%)",
+              background: "hsl(185, 41%, 56%)",
+              shadow: "0px 10px 2px 0px rgba(27,95,101,0.75",
             },
             secondary: {
               background: "hsl(25, 98%, 40%)",
-              shadow: "hsl(25, 99%, 27%)",
+              shadow: "0px 10px 2px 0px rgba(137,57,1,0.75)",
             },
             tertiary: {
               background: "hsl(45, 7%, 89%)",
-              shadow: "hsl(35, 11%, 61%)",
+              shadow: "0px 10px 2px 0px rgba(166,157,145,0.75)",
             },
           },
           text: {
@@ -82,15 +100,15 @@ export default {
           keys: {
             primary: {
               background: "hsl(281, 89%, 26%)",
-              shadow: "hsl(285, 91%, 52%)",
+              shadow: " 0px 10px 2px 0px rgba(188,21,244,0.75)",
             },
             secondary: {
               background: "hsl(176, 100%, 44%)",
-              shadow: "hsl(177, 92%, 70%)",
+              shadow: "0px 10px 2px 0px rgba(108,249,242,0.75)",
             },
             tertiary: {
               background: "hsl(268, 47%, 21%)",
-              shadow: "hsl(290, 70%, 36%)",
+              shadow: "0px 10px 2px 0px rgba(135,28,156,0.75)",
             },
           },
           text: {
