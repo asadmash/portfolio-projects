@@ -9,8 +9,7 @@ This repository contains a collection of portfolio projects built using **HTML, 
    - **Features:**
      - Feature 1 : Responsive Design: The component adapts seamlessly to different screen sizes using flexbox and CSS grid, ensuring a visually appealing layout on both desktop and mobile devices.
      - Feature 2 : Dynamic Storage Indicator: A progress bar dynamically updates based on the used and remaining storage, providing a clear visual representation of storage consumption.
-   - **Live Demo:** [Live Link](#)
-   - **Source Code:** [Project Folder](./project-folder-1)
+   - **Live Demo:** [Live Link](https://asadmash.github.io/portfolio-projects/21.fylo-data-storage-component/)
 
 ### 2. **Project Name 2**
    - **Description:** Briefly describe what this project does.
