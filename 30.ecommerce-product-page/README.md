@@ -95,6 +95,7 @@ To run this project locally:
 **Asad Mash**  
 🔗 [GitHub Profile](https://github.com/asadmash)  
 🌐 [Portfolio](https://asadmash.vercel.app/)
+
 📬 Open to feedback, collaboration, and opportunities!
 
 ---
