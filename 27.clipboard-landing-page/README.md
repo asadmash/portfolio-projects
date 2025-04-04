@@ -11,7 +11,7 @@ A responsive and modern landing page for the **Clipboard app**, built as part of
 ## 🚀 Live Demo
 
 🔗 [View Live Site](https://asadmash.github.io/portfolio-projects/27.clipboard-landing-page/)  
-*(Add your GitHub Pages or hosting link here if deployed)*
+
 
 ---
 
