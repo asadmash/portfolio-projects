@@ -109,5 +109,3 @@ This project is licensed under the [MIT License](LICENSE).
 > _This project was inspired by a challenge on Frontend Mentor and built as a hands-on learning experience in modern front-end development._
 
 ---
-
-Let me know if you'd like me to batch-generate more READMEs for the rest of your `portfolio-projects` repo too!
